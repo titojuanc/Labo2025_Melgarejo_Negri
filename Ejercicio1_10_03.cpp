@@ -35,9 +35,6 @@ int main(){
     cout<<"\nAñadir Empleados"<<endl;
     while(true){
         char salir='x';
-        cout<<"\n¿Salir? [S][N]: ";
-        cin>>salir;
-        if(salir=='S'){break;}
         cout<<"\nIngrese nombre del empleado: ";
         cin>>empleado.nombre;
         cout<<"\nIngrese apellido del empleado: ";
@@ -49,6 +46,9 @@ int main(){
         cout<<"\nIngrese salario: ";
         cin>>empleado.salario;
         empleados.push_back(empleado);
+        cout<<"\n¿Salir? [S][N]: ";
+        cin>>salir;
+        if(salir=='S'){break;}
     }
     
     empleado_mayor_salario=EmpleadoConSueldoMayor(empleados, empleados_salario_menor);
