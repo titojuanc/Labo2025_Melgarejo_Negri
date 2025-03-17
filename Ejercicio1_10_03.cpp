@@ -22,7 +22,7 @@ Empleado EmpleadoConSueldoMayor(vector<Empleado> empleados, vector<Empleado>& em
             empleado_mayor_salario.salario=empleado_each.salario;  
             mayor_salario=empleado_each.salario; 
         }
-        else if(empleado_each.salario<=400000){empleados_salario_menor.push_back(empleado_each);}
+        if(empleado_each.salario<=400000){empleados_salario_menor.push_back(empleado_each);}
     }
     return empleado_mayor_salario;
 }
@@ -60,8 +60,8 @@ int main(){
     cout<<"\nSexo: "<<empleado_mayor_salario.sexo;
     cout<<"\nSalario: "<<empleado_mayor_salario.salario<<endl;
 
+    cout<<"\nEmpleados con salario menor a $400.000";
     for(Empleado empleado_menor : empleados_salario_menor){
-        cout<<"\nEmpleados con salario menor a $400.000";
         cout<<"\nNombre: "<<empleado_menor.nombre;
         cout<<"\nApellido: "<<empleado_menor.apellido<<endl;
     }
