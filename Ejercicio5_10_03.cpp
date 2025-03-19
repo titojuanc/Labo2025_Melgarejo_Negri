@@ -9,7 +9,7 @@ const vector<string> mc_categorias={"Hamburguesa","Bebida","Postre","Ensalada","
 struct MC_Productos{
     string nombre;
     bool promo;
-    int cant_ventas;
+    int cant_ventas=0;
     float precio;
     string categoria;
 };
@@ -51,7 +51,7 @@ void ingresarMC_Productos(vector<MC_Productos>& v_mc_productos,MC_Productos mc_p
     }
 }
 
-void ingresarPedido(vector<Pedido>& v_pedidos, Pedido pedido, vector<MC_Productos> v_mc_productos, MC_Productos mc_producto){
+void ingresarPedido(vector<Pedido>& v_pedidos, Pedido pedido, vector<MC_Productos>& v_mc_productos, MC_Productos mc_producto){
     cout<<"\n::Ingresar Pedidos::"<<endl;
     cout<<"\nIngrese nombre del cliente: ";
     cin>>pedido.nombre_cliente;
@@ -71,12 +71,12 @@ void ingresarPedido(vector<Pedido>& v_pedidos, Pedido pedido, vector<MC_Producto
         cin>>listo_pedir_productos;
     }
     int aux_cant=0;
-    for(MC_Productos aux1 : pedido.ped_productos){
-        aux1.cant_ventas=0;
-        cout<<"\n¿Cuantos "<<aux1.nombre<<" quiere? ";
+    for(int i=0;i<pedido.ped_productos.size();i++){
+        cout<<"\n¿Cuantos "<<pedido.ped_productos[i].nombre<<" quiere? ";
         cin>>aux_cant;
-        pedido.cant_ped_productos.push_back(aux_cant);
-        aux1.cant_ventas+=aux_cant;
+        v_mc_productos[i].cant_ventas+=aux_cant;
+        pedido.ped_productos[i].cant_ventas=aux_cant;
+        pedido.cant_ped_productos.push_back(pedido.ped_productos[i].cant_ventas);
     }
     cout<<"\nIngrese el día del pedido [dd]: ";
     cin>>pedido.fecha.dia;
@@ -117,11 +117,7 @@ void consultarPedido(vector<Pedido>& v_pedidos, Pedido pedido){
 void ordenarPorVentas(vector<MC_Productos> v_mc_productos, MC_Productos mc_producto, Pedido pedido){
     cout<<"\n::Ordenar Por Ventas::"<<endl;
     vector<MC_Productos> aux_ordenar;
-    for(MC_Productos aux : v_mc_productos){
-        aux_ordenar.push_back(aux);
-        cout<<"Aux: "<<aux.nombre<<endl;
-        cout<<"Aux_ventas: "<<aux.cant_ventas<<endl;
-    }
+    
     for(int i=0;i<aux_ordenar.size();i++){
         for(int j=0;j<aux_ordenar.size()-i-1;j++){
             if(aux_ordenar[j].cant_ventas < aux_ordenar[j+1].cant_ventas){
