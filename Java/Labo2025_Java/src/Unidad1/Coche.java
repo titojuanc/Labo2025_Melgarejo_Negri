@@ -1,3 +1,5 @@
+package Unidad1;
+
 public class Coche {
     private String marca;
     private String modelo;
@@ -37,17 +39,17 @@ public class Coche {
         this.velocidad=this.velocidad+vel;
     }
     public void Frenar(float fre){
-        this.velocidad=this.velocidad-fre
+        this.velocidad=this.velocidad-fre;
     }
     public void mostrarVelocidadActual(){
         System.out.println("El auto está yendo a "+this.velocidad+"KM/H");
     }
 
     public static void main(String[] args) {
-        fitito= new Coche("Volskwagen","Virtus","Gris");
-        fitito.getMarca();
-        fitito.getModelo();
-        fitito.getColor();
+        Coche fitito= new Coche("Volskwagen","Virtus","Gris");
+        System.out.println(fitito.getMarca());
+        System.out.println(fitito.getModelo());
+        System.out.println(fitito.getColor());
         fitito.Acelerar((float)37.5);
         fitito.Frenar((float)10);
         fitito.mostrarVelocidadActual();

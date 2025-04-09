@@ -1,3 +1,5 @@
+package Unidad1;
+
 public class Circulo {
     private float radio;
 
@@ -24,12 +26,12 @@ public class Circulo {
     }
 
     public static void main(String[] args) {
-        circulo= new Circulo();
-        circulo2 = new Circulo((float)4.2);
-        circulo.getRadio;
-        circulo2.setRadio(5);
-        circulo.getArea();
-        circulo2.getPerimetro();
+        Circulo cir1= new Circulo();
+        Circulo cir2 = new Circulo((float)4.2);
+        System.out.println(cir1.getRadio());
+        cir2.setRadio(5);
+        System.out.println(cir1.getArea());
+        System.out.println(cir2.getPerimetro());
     }
 }
 

@@ -1,3 +1,5 @@
+package Unidad1;
+
 public class Fecha{
     private int dia;
     private int mes;
@@ -52,23 +54,27 @@ public class Fecha{
     }
 
     public int diasMes(Fecha fecha){
+        int diasas=0;
         int[]treinta = {4, 6, 9, 11};
-        int[]treintayuno= {1, 3, 5, 7, 8, 10, 12}
+        int[]treintayuno= { 1, 3, 5, 7, 8, 10, 12 };
         if(fecha.getMes()==2){
-            return 28;
+            diasas=28;
         }
         else {
-            for (s:treinta){
-                if(s==fecha.getMes()){
-                    return 30;
+            for (int k : treinta) {
+                if (k == fecha.getMes()) {
+                    diasas = 30;
+                    break;
                 }
             }
-            for (s:treintayuno){
-                if (s==fecha.getMes()){
-                    return 31;
+            for (int j : treintayuno) {
+                if (j == fecha.getMes()) {
+                    diasas = 31;
+                    break;
                 }
             }
         }
+        return diasas;
     }
 
     public String corta(Fecha fecha){
@@ -77,5 +83,16 @@ public class Fecha{
     public String larga(Fecha fecha){
         return "Día de la semana "+fecha.getDia()+" del mes "+fecha.getMes()+" del año "+fecha.getAnio();
     }
+    public int diaSiguiente(Fecha fecha){
+        int[]treinta = {4, 6, 9, 11};
+        int[]treintayuno= { 1, 3, 5, 7, 8, 10, 12 };
+        for (int s : treinta){
+            if (s == fecha.getMes()){
+                if (fecha.getDia())
+                    //REANUDAR DESDE ACÁ
+            }
+        }
+    }
+
 
 }
