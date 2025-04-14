@@ -11,6 +11,12 @@ public class Fecha{
         this.anio=anio;
     }
 
+    public Fecha(){
+        this.dia=9;
+        this.mes=12;
+        this.anio=2018;
+    }
+
     public int getAnio() {
         return anio;
     }
@@ -227,5 +233,4 @@ public class Fecha{
             System.out.println("mayor");
         }
     }
-
 }
