@@ -20,6 +20,11 @@ public class Cafetera {
         this.cantActual=0;
     }
 
+    public Cafetera(int cantMax){
+        this.cantMax=cantMax;
+        this.cantActual=cantMax;
+    }
+
     public int getCantMax() {
         return cantMax;
     }
