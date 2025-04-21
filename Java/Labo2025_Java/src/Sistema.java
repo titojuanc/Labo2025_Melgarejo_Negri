@@ -21,6 +21,19 @@ public class Sistema {
     }
 
     public void generarFixture(){
+        ArrayList<Equipo> equiposMañana = new ArrayList<Equipo>();
+        ArrayList<Equipo> equiposTarde = new ArrayList<Equipo>();
+        ArrayList<Equipo> equiposNoche = new ArrayList<Equipo>();
+        if(equipos.isEmpty()){
+            System.out.println("Falta llenar equipos");
+        }
+        else{
+            for (int i=0;i<equipos.size();i++){
+                switch (equipos.get(i).getDisponibilidad().toLowerCase()) {
+                    case "mañana":
 
+                }
+            }
+        }
     }
 }
