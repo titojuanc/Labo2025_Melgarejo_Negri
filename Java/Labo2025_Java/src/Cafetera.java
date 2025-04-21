@@ -1,5 +1,3 @@
-package Unidad1;
-
 public class Cafetera {
     private int cantMax;
     private int cantActual;
