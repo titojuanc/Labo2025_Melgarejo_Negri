@@ -17,9 +17,13 @@ public class Materia {
     }
 
     public Materia() {
-        this.nombre="Utilidad.Materia x";
+        this.nombre="Materia x";
         this.listaDeContenidos = new ArrayList<String>();
+        this.listaDeContenidos.add("Contenido1");
+        this.listaDeContenidos.add("Contenido2");
+        this.listaDeContenidos.add("Contenido3");
         this.listaAlumnos = new ArrayList<Alumno>();
+
     }
 
     public String getNombre() {
@@ -51,8 +55,8 @@ public class Materia {
         for (Alumno alumno : this.listaAlumnos){
             prom += LocalDate.now().getYear()- alumno.getFechaNacimiento().getAnio();
         }
-        prom = prom/this.listaAlumnos.size();
-        return prom;
+        return prom/this.listaAlumnos.size();
+
     }
 
 }

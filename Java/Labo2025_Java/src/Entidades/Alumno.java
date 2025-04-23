@@ -1,5 +1,9 @@
 package Entidades;
 
+import Utilidad.Fecha;
+import Utilidad.Materia;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -14,8 +18,13 @@ public class Alumno {
         this.nombre="";
         this.apelido="";
         this.materias = new ArrayList<Materia>();
+        Materia materia1 = new Materia();
+        this.materias.add(materia1);
         this.fechaNacimiento=new Fecha(0,0,0);
-        this.listaDeNotas=new ArrayList<>();
+        this.listaDeNotas= new ArrayList<Integer>();
+        this.listaDeNotas.add(8);
+        this.listaDeNotas.add(10);
+
     }
 
     public Alumno(String nombre, String apelido, Fecha fechaNacimiento, ArrayList<Integer> listaDeNotas, ArrayList<Materia> materias) {
@@ -80,7 +89,7 @@ public class Alumno {
 
     public void agregarMateria(Materia materia){
         this.materias.add(materia);
-        System.out.println("Utilidad.Materia "+materia.getNombre()+" agregada.");
+        System.out.println("materia "+materia.getNombre()+" agregada.");
     }
 
     public double promedioNotaAlumno(){
@@ -88,17 +97,28 @@ public class Alumno {
         for (int nota : this.listaDeNotas ){
             prom += nota;
         }
-        prom = prom/this.listaDeNotas.size();
-        return prom;
+        return prom/this.listaDeNotas.size();
+
     }
 
     public static void main(String[] args) {
-        Materia m1 = new Materia();
-        Alumno a1= new Alumno();
 
-        a1.agregarMateria(m1);
-        System.out.println(m1.promedioEdadAlumnos());
-        System.out.println(a1.promedioNotaAlumno());
+        ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
+        Alumno a1= new Alumno();
+        Alumno a2 = new Alumno();
+        alumnos.add(a1);
+        alumnos.add(a2);
+
+        ArrayList<String> contenidos = new ArrayList<String>();
+        contenidos.add("contenido 1");
+        contenidos.add("contenido 2");
+        contenidos.add("contenido 3");
+
+        ArrayList<Materia> listaMaterias = new ArrayList<Materia>();
+        Materia m1 = new Materia();
+        listaMaterias.add(m1);
+        Materia m2 = new Materia();
+        listaMaterias.add(m2);
     }
 }
 

@@ -43,10 +43,7 @@ public class Cancion {
         return autor.getEdad();
     }
 
-    public void setNombre(int edad) {
+    public void setEdad(int edad) {
         this.autor.setEdad(edad);
-    }
-    public static void main(String[] args) {
-
     }
 }

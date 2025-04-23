@@ -1,5 +1,8 @@
 package Objetos;
 
+import Entidades.Persona;
+import Utilidad.Fecha;
+
 public class Libro {
     private String titulo;
     private Persona autor;
