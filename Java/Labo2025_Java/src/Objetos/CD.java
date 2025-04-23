@@ -32,13 +32,25 @@ public class CD {
         return this.canciones.size();
     }
 
-    public Cancion verCancion(int posicion){
-            return this.canciones.get(posicion);
+    public String verCancion(int posicion){
+        if (posicion > this.numeroCanciones()-1){
+            return "Index error";
+        }
+        else {
+            return this.canciones.get(posicion).getTitulo();
+        }
+
     }
 
     public void grabarCancion(int posicion, Cancion nuevaCancion){
-            this.canciones.set(posicion-1, nuevaCancion);
+        if (posicion > this.numeroCanciones()-1){
+            System.out.println("Index error");;
+        }
+        else {
+            this.canciones.set(posicion, nuevaCancion);
             System.out.println("Cancion actualizada");
+        }
+
     }
 
     public void agregarCanciones(Cancion nuevaCancion){
@@ -47,31 +59,45 @@ public class CD {
     }
 
     public void eliminarCancion(int posicion){
+        if (posicion > this.numeroCanciones()-1){
+            System.out.println("Index error");
+        }
+        else {
             this.canciones.remove(posicion);
             System.out.println("Última canción eliminada");
+        }
+
     }
 
     public static void main(String[] args) {
         Persona artista1 = new Persona("Alberto", 40, "X");
         Cancion cancion1 = new Cancion("Bajan", artista1);
         Cancion cancion2 = new Cancion("Salir de la melanconía", artista1);
+
         CD cd1 = new CD(new ArrayList<Cancion>());
         cd1.agregarCanciones(cancion1);
-        cd1.agregarCanciones(cancion2);
-        CD bocanada = new CD();
+        System.out.println(cd1.verCancion(0));
 
-        System.out.println("Número de canciones de cd1: "+cd1.numeroCanciones());
-        System.out.println("Número de canciones de bocanada: "+bocanada.numeroCanciones());
-        cd1.grabarCancion(1, cancion2);
+
+        CD bocanada = new CD();
+        System.out.println(bocanada.verCancion(0));
+        System.out.println(bocanada.verCancion(1));
+        System.out.println(bocanada.verCancion(2));
+        System.out.println(bocanada.numeroCanciones());
+
+        cd1.agregarCanciones(cancion2);
+        System.out.println(cd1.verCancion(1));
+        cd1.grabarCancion(0, cancion2);
+        System.out.println(cd1.verCancion(0));
         cd1.eliminarCancion(1);
         System.out.println(cd1.verCancion(1));
-        bocanada.agregarCanciones(cancion1);
-        cd1.agregarCanciones(cancion1);
-        cd1.agregarCanciones(cancion2);
-        bocanada.agregarCanciones(cancion1);
-        bocanada.agregarCanciones(cancion2);
-        System.out.println("Número de canciones de cd1: "+cd1.numeroCanciones());
-        System.out.println("Número de canciones de bocanada: "+bocanada.numeroCanciones());
+        System.out.println(cd1.verCancion(0));
+
+
+
+
+
+
 
 
 
