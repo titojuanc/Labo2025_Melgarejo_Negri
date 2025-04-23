@@ -1,3 +1,5 @@
+package Objetos;
+
 public class Libro {
     private String titulo;
     private Persona autor;
@@ -89,9 +91,9 @@ public class Libro {
         System.out.println("ISBN: "+this.isbn);
         System.out.println("Paginas: "+this.paginas);
         System.out.println("Editorial: "+this.editorial);
-        System.out.println("Fecha Dia: "+this.fecha.getDia());
-        System.out.println("Fecha Mes: "+this.fecha.getMes());
-        System.out.println("Fecha Año: "+this.fecha.getAnio());
+        System.out.println("Utilidad.Fecha Dia: "+this.fecha.getDia());
+        System.out.println("Utilidad.Fecha Mes: "+this.fecha.getMes());
+        System.out.println("Utilidad.Fecha Año: "+this.fecha.getAnio());
     }
 
     public boolean compararFecha(Libro libro){

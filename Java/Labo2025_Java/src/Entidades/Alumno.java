@@ -1,4 +1,5 @@
-import java.time.LocalDate;
+package Entidades;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -79,7 +80,7 @@ public class Alumno {
 
     public void agregarMateria(Materia materia){
         this.materias.add(materia);
-        System.out.println("Materia "+materia.getNombre()+" agregada.");
+        System.out.println("Utilidad.Materia "+materia.getNombre()+" agregada.");
     }
 
     public double promedioNotaAlumno(){

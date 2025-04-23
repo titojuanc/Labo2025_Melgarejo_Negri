@@ -1,3 +1,7 @@
+package Objetos;
+
+import Entidades.Persona;
+
 public class Cancion {
     private String titulo;
     private Persona autor;

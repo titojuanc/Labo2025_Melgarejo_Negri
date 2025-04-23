@@ -1,3 +1,7 @@
+package Utilidad;
+
+import Entidades.Alumno;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -13,7 +17,7 @@ public class Materia {
     }
 
     public Materia() {
-        this.nombre="Materia x";
+        this.nombre="Utilidad.Materia x";
         this.listaDeContenidos = new ArrayList<String>();
         this.listaAlumnos = new ArrayList<Alumno>();
     }
