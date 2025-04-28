@@ -20,7 +20,7 @@ public class Alumno {
         this.materias = new ArrayList<Materia>();
         Materia materia1 = new Materia();
         this.materias.add(materia1);
-        this.fechaNacimiento=new Fecha(0,0,0);
+        this.fechaNacimiento=new Fecha(15,10,2006);
         this.listaDeNotas= new ArrayList<Integer>();
         this.listaDeNotas.add(8);
         this.listaDeNotas.add(10);
