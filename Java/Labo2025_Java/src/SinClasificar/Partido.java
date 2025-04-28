@@ -3,31 +3,33 @@ package SinClasificar;
 import Entidades.Equipo;
 import Utilidad.Fecha;
 
+import java.time.LocalDate;
+
 public class Partido {
-    private Fecha fechaPartido;
+    private LocalDate fechaPartido;
     private String turno;
     private Equipo equipoLocal;
     private Equipo equipoVisitante;
 
     public Partido(){
-        this.fechaPartido=new Fecha();
+        this.fechaPartido=LocalDate.now();
         this.turno="";
         this.equipoLocal=new Equipo();
         this.equipoVisitante=new Equipo();
     }
 
-    public Partido(Fecha fechaPartido, String turno, Equipo equipoLocal, Equipo equipoVisitante) {
+    public Partido(LocalDate fechaPartido, String turno, Equipo equipoLocal, Equipo equipoVisitante) {
         this.fechaPartido = fechaPartido;
         this.turno = turno;
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
     }
 
-    public Fecha getFechaPartido() {
+    public LocalDate getFechaPartido() {
         return fechaPartido;
     }
 
-    public void setFechaPartido(Fecha fechaPartido) {
+    public void setFechaPartido(LocalDate fechaPartido) {
         this.fechaPartido = fechaPartido;
     }
 
