@@ -29,15 +29,23 @@ public class Sistema {
         this.listaEquipos = equipos;
     }
 
-    public void ordenarEquipos(ArrayList<Equipo> pequipos){
-        for (int i = 0; i<pequipos.size(); i+=2) {
-            if (i + 1 < pequipos.size()) {
-                Partido partido = new Partido(fechaHoy, pequipos.get(i).getDisponibilidad(), pequipos.get(i), pequipos.get(i + 1));
-                this.fixture.add(partido);
-            } else {
-                System.out.println("El equipo " + pequipos.get(i).getNombre() + " queda afuera por imparidad");
+    public void generarPartidos(Equipo equipo1, Equipo equipo2, String disponibilidad){
+        Partido partido = new Partido(this.fechaHoy, disponibilidad, equipo1, equipo2);
+        fixture.add(partido);
+    }
+
+    public void emparejarEquipos(ArrayList<Equipo> equipos){
+        for (int i = 0; i < equipos.size(); i++) {
+            for (int j = i+1; j < equipos.size(); j++) {
+                if (j + 1 > equipos.size()) {
+                    break;
+                } else {
+                    this.generarPartidos(equipos.get(i), equipos.get(j), equipos.get(i).getDisponibilidad());
+                }
+                this.fechaHoy=this.fechaHoy.plusDays(7);
             }
         }
+        this.fechaHoy=LocalDate.now();
     }
 
     public void generarFixture(){
@@ -63,10 +71,13 @@ public class Sistema {
                 }
             }
         }
-        ordenarEquipos(equiposManana);
-        ordenarEquipos(equiposTarde);
-        ordenarEquipos(equiposNoche);
-        fechaHoy.plusDays(7);
+
+        this.emparejarEquipos(equiposManana);
+        this.emparejarEquipos(equiposTarde);
+        this.emparejarEquipos(equiposNoche);
+    }
+
+    public void imprimirFixture(){
         for (int i = 0; i < this.fixture.size(); i++) {
             System.out.println("Partido " + i + "- Equipo Local: " + this.fixture.get(i).getEquipoLocal().getNombre() + " Equipo Visitante: " + this.fixture.get(i).getEquipoVisitante().getNombre() + " Fecha: " + this.fixture.get(i).getFechaPartido() + " Turno: " + this.fixture.get(i).getTurno());
         }
@@ -108,6 +119,8 @@ public class Sistema {
         Collections.addAll(s1.listaEquipos, e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13);
 
         s1.generarFixture();
+
+        s1.imprimirFixture();
     }
 }
 
