@@ -119,6 +119,28 @@ public class Alumno {
         listaMaterias.add(m1);
         Materia m2 = new Materia();
         listaMaterias.add(m2);
+
+        ArrayList<Integer> listaNotas = new ArrayList<Integer>();
+        listaNotas.add(5);
+        listaNotas.add(10);
+
+        alumnos.getFirst().agregarMateria(m1);
+        alumnos.getFirst().agregarMateria(m2);
+        alumnos.getLast().agregarMateria(m1);
+        alumnos.getLast().agregarMateria(m2);
+
+        alumnos.getFirst().setListaDeNotas(listaNotas);
+        alumnos.getLast().setListaDeNotas(listaNotas);
+
+        listaMaterias.getFirst().agregarAlumno(a1);
+        listaMaterias.getFirst().agregarAlumno(a2);
+        listaMaterias.getLast().agregarAlumno(a1);
+        listaMaterias.getLast().agregarAlumno(a2);
+
+
+        System.out.println(listaMaterias.getFirst().promedioEdadAlumnos());
+        System.out.println(alumnos.getFirst().promedioNotaAlumno());
+
     }
 }
 

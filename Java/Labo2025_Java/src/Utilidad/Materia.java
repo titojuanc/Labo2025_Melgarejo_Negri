@@ -50,6 +50,10 @@ public class Materia {
         this.listaDeContenidos = listaDeContenidos;
     }
 
+    public void agregarAlumno (Alumno alumno){
+        this.listaAlumnos.add(alumno);
+    }
+
     public double promedioEdadAlumnos(){
         double prom = 0;
         for (Alumno alumno : this.listaAlumnos){
