@@ -1,4 +1,4 @@
-package SinClasificar;
+package Torneo;
 
 import Entidades.Equipo;
 import SinClasificar.Partido;
@@ -10,12 +10,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Sistema {
+public class Curling {
     private ArrayList<Equipo> listaEquipos;
     private ArrayList<Partido> fixture;
     private LocalDate fechaHoy;
 
-    public Sistema(){
+    public Curling(){
         this.listaEquipos=new ArrayList<Equipo>();
         this.fixture= new ArrayList<Partido>();
         this.fechaHoy=LocalDate.now();
@@ -84,7 +84,7 @@ public class Sistema {
     }
 
     public static void main(String[] args) {
-        Sistema s1 = new Sistema();
+        Curling s1 = new Curling();
 
         Jugador j1 = new Jugador("Lionel Messi", new Fecha(24, 6, 1987), 10, true);
         Jugador j2 = new Jugador("Emiliano Martínez", new Fecha(2, 9, 1992), 23, false);
