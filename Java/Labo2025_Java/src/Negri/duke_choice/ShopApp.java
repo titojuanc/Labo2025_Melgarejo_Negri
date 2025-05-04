@@ -21,10 +21,17 @@ public class ShopApp {
         //total = item1.getPrice() + 2*(item2.getPrice()) + tax;
         //System.out.println("Total: " + total);
 
-        /*4.1*/
-        c1.setSize("S");
 
         /*4.2*/
         Clothing[] items = {item1, item2, item3, item4};
 
         c1.addItems(items);
+
+        c1.getTotalClothingCost();
+
+        for (Clothing item : items) {
+            System.out.println("Item: " + item.getDescription() + "," + item.getPrice() + "," + (char)(item.getSize()));
+        }
+
+    }
+}
