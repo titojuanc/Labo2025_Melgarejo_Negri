@@ -20,7 +20,7 @@ public class Alumno {
         this.materias = new ArrayList<Materia>();
         Materia materia1 = new Materia();
         this.materias.add(materia1);
-        this.fechaNacimiento=new Fecha(0,0,0);
+        this.fechaNacimiento=new Fecha(15,10,2006);
         this.listaDeNotas= new ArrayList<Integer>();
         this.listaDeNotas.add(8);
         this.listaDeNotas.add(10);
@@ -119,6 +119,28 @@ public class Alumno {
         listaMaterias.add(m1);
         Materia m2 = new Materia();
         listaMaterias.add(m2);
+
+        ArrayList<Integer> listaNotas = new ArrayList<Integer>();
+        listaNotas.add(5);
+        listaNotas.add(10);
+
+        alumnos.getFirst().agregarMateria(m1);
+        alumnos.getFirst().agregarMateria(m2);
+        alumnos.getLast().agregarMateria(m1);
+        alumnos.getLast().agregarMateria(m2);
+
+        alumnos.getFirst().setListaDeNotas(listaNotas);
+        alumnos.getLast().setListaDeNotas(listaNotas);
+
+        listaMaterias.getFirst().agregarAlumno(a1);
+        listaMaterias.getFirst().agregarAlumno(a2);
+        listaMaterias.getLast().agregarAlumno(a1);
+        listaMaterias.getLast().agregarAlumno(a2);
+
+
+        System.out.println(listaMaterias.getFirst().promedioEdadAlumnos());
+        System.out.println(alumnos.getFirst().promedioNotaAlumno());
+
     }
 }
 
