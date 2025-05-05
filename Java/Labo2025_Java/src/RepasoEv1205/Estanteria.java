@@ -1,5 +1,7 @@
 package RepasoEv1205;
 
+import Entidades.Persona;
+
 import java.util.ArrayList;
 
 public class Estanteria {
@@ -52,13 +54,30 @@ public class Estanteria {
     }
 
     public Pelicula EstanteriaPeliculaMayorDuracion(){
-        int mayor_duracion=this.peliculas.getFirst().getDuracion();
-        Pelicula pelicula_aux=new Pelicula();
+        int mayor_duracion=this.peliculas.get(0).getDuracion();
+        Pelicula pelicula_aux=peliculas.get(0);
         for (Pelicula pelicula : this.peliculas){
             if (pelicula.getDuracion() > mayor_duracion){
                 pelicula_aux=pelicula;
+                mayor_duracion=pelicula.getDuracion();
             }
         }
         return pelicula_aux;
+    }
+
+    public ArrayList<Persona> directoresRepetidos(){
+        ArrayList<Persona> directores_rep=new ArrayList<>();
+        ArrayList<Persona> directores = new ArrayList<>();
+        for (Pelicula pelicula_aux : this.peliculas){
+            if (!directores.contains(pelicula_aux.getDirector())){
+                directores.add(pelicula_aux.getDirector());
+            }
+        }
+        for (Persona persona_aux : directores){
+            if (!directores_rep.contains(persona_aux)){
+                directores_rep.add(persona_aux);
+            }
+        }
+        return directores_rep;
     }
 }

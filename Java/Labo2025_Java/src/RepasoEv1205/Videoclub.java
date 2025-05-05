@@ -62,8 +62,17 @@ public class Videoclub {
         }
     }
 
-    public String mostrarNombreEstanteriaPeliculaMayorDuracion(Videoclub videoclub){
+    public String mostrarNombreEstanteriaPeliculaMayorDuracion(){
+        Pelicula pelicula_aux = estanterias.get(0).EstanteriaPeliculaMayorDuracion();;
+        int estanteria_num_aux=estanterias.get(0).getNumero_estanteria();
+        for (int i = 0; i < this.estanterias.size(); i++) {
+            if (estanterias.get(i).EstanteriaPeliculaMayorDuracion().getDuracion() > pelicula_aux.getDuracion()){
+                pelicula_aux = estanterias.get(i).EstanteriaPeliculaMayorDuracion();
+                estanteria_num_aux = estanterias.get(i).getNumero_estanteria();
+            }
+        }
 
-        return "";
+        String resultado = pelicula_aux.getNombre() + " Estanteria: " + estanteria_num_aux;
+        return resultado;
     }
 }

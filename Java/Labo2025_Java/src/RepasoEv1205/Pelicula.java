@@ -9,25 +9,25 @@ public class Pelicula {
     private String genero;
     private int duracion;
     private Persona director;
-    private Persona actor;
+    private ArrayList<Persona> actores;
     private ArrayList<String> idiomas;
 
     public Pelicula() {
         this.nombre="Harry Potter";
         this.genero="Fantastico";
-        this.duracion=210;
+        this.duracion=0;
         this.director=new Persona("Yo", 10, "aca");
-        this.actor=new Persona("Nico", 17, "Poli");
+        this.actores=new ArrayList<>();
         this.idiomas=new ArrayList<>();
         idiomas.add("ingles");
     }
 
-    public Pelicula(String nombre, String genero, int duracion, Persona director, Persona actor, ArrayList<String> idiomas) {
+    public Pelicula(String nombre, String genero, int duracion, Persona director, ArrayList<Persona> actores, ArrayList<String> idiomas) {
         this.nombre = nombre;
         this.genero = genero;
         this.duracion = duracion;
-        this.director = director;
-        this.actor = actor;
+        this.director = new Persona(director.getNombre(), director.getEdad(), director.getDireccion());
+        this.actores = actores;
         this.idiomas = idiomas;
     }
 
@@ -63,12 +63,12 @@ public class Pelicula {
         this.director = director;
     }
 
-    public Persona getActor() {
-        return actor;
+    public ArrayList<Persona> getActores() {
+        return actores;
     }
 
-    public void setActor(Persona actor) {
-        this.actor = actor;
+    public void setActores(ArrayList<Persona> actores) {
+        this.actores = actores;
     }
 
     public ArrayList<String> getIdiomas() {
@@ -77,5 +77,15 @@ public class Pelicula {
 
     public void setIdiomas(ArrayList<String> idiomas) {
         this.idiomas = idiomas;
+    }
+
+    public ArrayList<Persona> peliculaActoresMayoresEdad(){
+        ArrayList<Persona> persona_ret=new ArrayList<>();
+        for (Persona persona_aux : this.getActores()){
+            if (persona_aux.getEdad() > 18){
+                persona_ret.add(persona_aux);
+            }
+        }
+        return persona_ret;
     }
 }
