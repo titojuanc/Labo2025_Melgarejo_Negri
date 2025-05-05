@@ -1,4 +1,4 @@
-package Melgarejo_Repaso.duke_choice;
+package Negri.duke_choice;
 
 public class ShopApp {
     public static void main(String[] args) {

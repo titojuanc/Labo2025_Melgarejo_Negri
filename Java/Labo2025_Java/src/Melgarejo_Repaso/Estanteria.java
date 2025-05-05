@@ -12,7 +12,7 @@ public class Estanteria {
     public Estanteria (){
         ArrayList<Pelicula> p = new ArrayList<>();
         Pelicula p1 = new Pelicula();
-        Pelicula p2 = new Pelicula("Peli 1", "Drama");
+        Pelicula p2 = new Pelicula("Peli 1", "Drama", 100);
         this.peliculas = p;
     }
 

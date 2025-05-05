@@ -21,10 +21,10 @@ public class Pelicula {
         this.idiomas = idiomas;
     }
 
-    public Pelicula(String nombre, String genero) {
+    public Pelicula(String nombre, String genero, int duracion) {
         this.nombre = nombre;
         this.genero = genero;
-        this.duracion = 100;
+        this.duracion = duracion;
         this.directores = new ArrayList<>();
         this.directores.add(new Persona("Gabriel", 40, "X"));
         this.directores.add(new Persona("Salvador", 39, "X"));
