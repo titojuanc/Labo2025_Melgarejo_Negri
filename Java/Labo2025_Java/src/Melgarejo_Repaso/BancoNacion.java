@@ -36,7 +36,7 @@ public class BancoNacion {
     }
 
     public void cantidadTrabajadores(){
-        System.out.println(this.trabajadores.size());
+        System.out.println("Cantidad de trabajadores de "+ this.direccion+": "+this.trabajadores.size());
     }
 
     public PersonaBanco empleadoMayorAntiguedad(){
