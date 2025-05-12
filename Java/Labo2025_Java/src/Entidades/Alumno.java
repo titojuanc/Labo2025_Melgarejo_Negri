@@ -2,6 +2,7 @@ package Entidades;
 
 import Utilidad.Fecha;
 import Utilidad.Materia;
+import org.junit.Test;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -101,6 +102,9 @@ public class Alumno {
 
     }
 
+
+
+
     public static void main(String[] args) {
 
         ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
@@ -136,7 +140,6 @@ public class Alumno {
         listaMaterias.getFirst().agregarAlumno(a2);
         listaMaterias.getLast().agregarAlumno(a1);
         listaMaterias.getLast().agregarAlumno(a2);
-
 
         System.out.println(listaMaterias.getFirst().promedioEdadAlumnos());
         System.out.println(alumnos.getFirst().promedioNotaAlumno());

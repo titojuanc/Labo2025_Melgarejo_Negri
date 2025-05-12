@@ -1,4 +1,4 @@
-package RepasoEv1205.Ej2;
+/*package RepasoEv1205.Ej2;
 
 import Entidades.Persona;
 
@@ -78,4 +78,4 @@ public class BancoNacion_r {
         }
         return p;
     }
-}
+}*/

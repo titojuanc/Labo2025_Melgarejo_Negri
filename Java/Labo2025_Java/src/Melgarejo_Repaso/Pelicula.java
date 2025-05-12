@@ -118,6 +118,7 @@ public class Pelicula {
         for (String i : this.idiomas){
             System.out.print(i+" ");
         }
+        System.out.println("");
     }
     public Persona actorMayorEdad(){
         Persona persona= this.actores.getFirst();

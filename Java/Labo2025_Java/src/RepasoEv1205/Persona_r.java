@@ -1,4 +1,4 @@
-package RepasoEv1205.Ej2;
+/*package RepasoEv1205.Ej2;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -70,3 +70,4 @@ public class Persona_r {
         return Period.between(fecha_ingreso,LocalDate.now());
     }
 }
+*/
