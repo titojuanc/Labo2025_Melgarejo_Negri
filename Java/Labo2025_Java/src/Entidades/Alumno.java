@@ -12,6 +12,7 @@ public class Alumno extends Persona{
     private Fecha fechaNacimiento;
     private ArrayList<Integer> listaDeNotas;
     private ArrayList<Materia> materias;
+    private String division;
 
     public Alumno(){
         super();
@@ -22,14 +23,20 @@ public class Alumno extends Persona{
         this.listaDeNotas= new ArrayList<Integer>();
         this.listaDeNotas.add(8);
         this.listaDeNotas.add(10);
-
+        this.division="1";
     }
 
-    public Alumno(String nombre, String apelido, int edad, Fecha fechaNacimiento, ArrayList<Integer> listaDeNotas, ArrayList<Materia> materias) {
+    public Alumno(String nombre, String apelido, int edad, Fecha fechaNacimiento, ArrayList<Integer> listaDeNotas, ArrayList<Materia> materias, String division) {
         super(nombre,apelido,edad);
         this.fechaNacimiento = fechaNacimiento;
         this.listaDeNotas = listaDeNotas;
         this.materias = materias;
+        this.division=division;
+    }
+
+    public Alumno(String nombre, String apellido, String division){
+        super(nombre,apellido);
+        this.division=division;
     }
 
     public Fecha getFechaNacimiento() {
@@ -68,6 +75,14 @@ public class Alumno extends Persona{
         this.materias = materias;
     }
 
+    public String getDivision() {
+        return division;
+    }
+
+    public void setDivision(String division) {
+        this.division = division;
+    }
+
     public void agregarMateria(Materia materia){
         this.materias.add(materia);
         System.out.println("materia "+materia.getNombre()+" agregada.");
@@ -81,9 +96,6 @@ public class Alumno extends Persona{
         return prom/this.listaDeNotas.size();
 
     }
-
-
-
 
     public static void main(String[] args) {
 
