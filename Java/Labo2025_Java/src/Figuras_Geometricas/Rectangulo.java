@@ -1,10 +1,11 @@
 package Figuras_Geometricas;
 
-public class Rectangulo {
+public class Rectangulo extends FiguraGeometrica {
         private double base;
         private double altura;
 
         public Rectangulo() {
+            super();
             this.base = 4;
             this.altura = 3.5;
         }
@@ -31,20 +32,13 @@ public class Rectangulo {
         }
 
         public double calcularArea() {
-            double area = this.base * this.altura;
-            return area;
+            super.setArea(this.base * this.altura);
+            return super.getArea();
         }
 
         public double calcularPerimetro() {
-            double perimetro = 2 * this.base + 2 * this.altura;
-            return perimetro;
-        }
-
-
-        public static void main(String[] args) {
-            Rectangulo rectangulo1 = new Rectangulo();
-            System.out.println("Área: " + rectangulo1.calcularArea());
-            System.out.println("Perímetro: " + rectangulo1.calcularPerimetro());
+            super.setPerimetro(2 * this.base + 2 * this.altura);
+            return super.getPerimetro();
         }
     }
 

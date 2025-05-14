@@ -2,18 +2,18 @@ package Entidades;
 
 public class Persona {
     private String nombre;
+    String apellido;
     private int edad;
-    private String direccion;
 
     public Persona(){
         this.nombre="Pedro";
+        this.apellido="x";
         this.edad=15;
-        this.direccion="ElPoli";
     }
-    public Persona(String nombre, int edad, String direccion){
+    public Persona(String nombre, String apellido, int edad){
         this.nombre=nombre;
+        this.apellido=apellido;
         this.edad=edad;
-        this.direccion=direccion;
     }
 
     public String getNombre() {
@@ -24,6 +24,14 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
     public int getEdad() {
         return edad;
     }
@@ -32,23 +40,14 @@ public class Persona {
         this.edad = edad;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
     public void imprimirDatos(){
         System.out.println("Nombre: "+this.nombre);
+        System.out.println("Apellido: "+this.apellido);
         System.out.println("Edad: "+this.edad);
-        System.out.println("Direccion: "+this.direccion);
     }
 
     public static void main(String[] args) {
         Persona persona1 = new Persona();
-
         persona1.imprimirDatos();
     }
 }

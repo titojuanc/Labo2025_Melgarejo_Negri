@@ -31,14 +31,6 @@ public class Cancion {
         this.autor.setNombre(nombre);
     }
 
-    public String getDireccion() {
-        return autor.getDireccion();
-    }
-
-    public void setDireccion(String direccion) {
-        this.autor.setDireccion(direccion);
-    }
-
     public int getEdad() {
         return autor.getEdad();
     }

@@ -2,21 +2,20 @@ package Entidades;
 
 import Utilidad.Fecha;
 
-public class Jugador {
-    private String nombre;
+public class Jugador extends Persona{
     private Fecha fechaNacimiento;
     private int numeroCamiseta;
     private boolean capitan;
 
     public Jugador() {
-        this.nombre="";
+        super();
         this.fechaNacimiento= new Fecha();
         this.numeroCamiseta=0;
         this.capitan=false;
     }
 
-    public Jugador(String nombre, Fecha fechaNacimiento, int numeroCamiseta, boolean capitan) {
-        this.nombre = nombre;
+    public Jugador(String nombre, String apellido, int edad, Fecha fechaNacimiento, int numeroCamiseta, boolean capitan) {
+        super(nombre, apellido, edad);
         this.fechaNacimiento = fechaNacimiento;
         this.numeroCamiseta = numeroCamiseta;
         this.capitan = capitan;
@@ -28,14 +27,6 @@ public class Jugador {
 
     public void setNumeroCamiseta(int numeroCamiseta) {
         this.numeroCamiseta = numeroCamiseta;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public Fecha getFechaNacimiento() {

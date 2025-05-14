@@ -8,16 +8,13 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Alumno {
-    private String nombre;
-    private String apelido;
+public class Alumno extends Persona{
     private Fecha fechaNacimiento;
     private ArrayList<Integer> listaDeNotas;
     private ArrayList<Materia> materias;
 
     public Alumno(){
-        this.nombre="";
-        this.apelido="";
+        super();
         this.materias = new ArrayList<Materia>();
         Materia materia1 = new Materia();
         this.materias.add(materia1);
@@ -28,28 +25,11 @@ public class Alumno {
 
     }
 
-    public Alumno(String nombre, String apelido, Fecha fechaNacimiento, ArrayList<Integer> listaDeNotas, ArrayList<Materia> materias) {
-        this.nombre = nombre;
-        this.apelido = apelido;
+    public Alumno(String nombre, String apelido, int edad, Fecha fechaNacimiento, ArrayList<Integer> listaDeNotas, ArrayList<Materia> materias) {
+        super(nombre,apelido,edad);
         this.fechaNacimiento = fechaNacimiento;
         this.listaDeNotas = listaDeNotas;
         this.materias = materias;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApelido() {
-        return apelido;
-    }
-
-    public void setApelido(String apelido) {
-        this.apelido = apelido;
     }
 
     public Fecha getFechaNacimiento() {

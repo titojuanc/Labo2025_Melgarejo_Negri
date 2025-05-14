@@ -92,15 +92,5 @@ public class CD {
         cd1.eliminarCancion(1);
         System.out.println(cd1.verCancion(1));
         System.out.println(cd1.verCancion(0));
-
-
-
-
-
-
-
-
-
-
     }
 }

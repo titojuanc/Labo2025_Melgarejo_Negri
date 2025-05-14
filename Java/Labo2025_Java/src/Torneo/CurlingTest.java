@@ -6,7 +6,6 @@ import Utilidad.Fecha;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
@@ -52,30 +51,30 @@ public class CurlingTest {
          e12 = new Equipo("Poli11", "barrio", jugadores_main, "noche");
          e13 = new Equipo("Poli12", "barrio", jugadores_main, "noche");
 
-        Collections.addAll(s1.getListaEquipos(), e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13);
+        Collections.addAll(s1.getEquipos(), e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13);
     }
 
     @Test
     public void testListaEquipos(){
-        assertEquals(13, s1.getListaEquipos().size());
-        assertEquals(e1, s1.getListaEquipos().get(0));
-        assertEquals(e13, s1.getListaEquipos().get(12));
-        for (Equipo equipo : s1.getListaEquipos()) {
+        assertEquals(13, s1.getEquipos().size());
+        assertEquals(e1, s1.getEquipos().get(0));
+        assertEquals(e13, s1.getEquipos().get(12));
+        for (Equipo equipo : s1.getEquipos()) {
             assertNotNull(equipo);
         }
-        assertTrue(s1.getListaEquipos().contains(e1));
-        assertTrue(s1.getListaEquipos().contains(e2));
-        assertTrue(s1.getListaEquipos().contains(e3));
-        assertTrue(s1.getListaEquipos().contains(e4));
-        assertTrue(s1.getListaEquipos().contains(e5));
-        assertTrue(s1.getListaEquipos().contains(e6));
-        assertTrue(s1.getListaEquipos().contains(e7));
-        assertTrue(s1.getListaEquipos().contains(e8));
-        assertTrue(s1.getListaEquipos().contains(e9));
-        assertTrue(s1.getListaEquipos().contains(e10));
-        assertTrue(s1.getListaEquipos().contains(e11));
-        assertTrue(s1.getListaEquipos().contains(e12));
-        assertTrue(s1.getListaEquipos().contains(e13));
+        assertTrue(s1.getEquipos().contains(e1));
+        assertTrue(s1.getEquipos().contains(e2));
+        assertTrue(s1.getEquipos().contains(e3));
+        assertTrue(s1.getEquipos().contains(e4));
+        assertTrue(s1.getEquipos().contains(e5));
+        assertTrue(s1.getEquipos().contains(e6));
+        assertTrue(s1.getEquipos().contains(e7));
+        assertTrue(s1.getEquipos().contains(e8));
+        assertTrue(s1.getEquipos().contains(e9));
+        assertTrue(s1.getEquipos().contains(e10));
+        assertTrue(s1.getEquipos().contains(e11));
+        assertTrue(s1.getEquipos().contains(e12));
+        assertTrue(s1.getEquipos().contains(e13));
     }
     public void testJugadores_main(){
         assertEquals(11, jugadores_main.size());
