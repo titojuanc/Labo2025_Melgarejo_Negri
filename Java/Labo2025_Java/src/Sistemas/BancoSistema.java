@@ -1,4 +1,7 @@
-package Melgarejo_Repaso;
+package Sistemas;
+import Melgarejo_Repaso.BancoNacion;
+import Melgarejo_Repaso.PersonaBanco;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 

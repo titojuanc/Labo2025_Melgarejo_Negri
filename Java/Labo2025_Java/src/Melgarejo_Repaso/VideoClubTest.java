@@ -1,5 +1,6 @@
 package Melgarejo_Repaso;
 
+import Sistemas.VideoclubSistema;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;

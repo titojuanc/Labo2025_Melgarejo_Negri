@@ -26,7 +26,7 @@ public class Pelicula {
         this.genero = genero;
         this.duracion = duracion;
         this.directores = new ArrayList<>();
-        this.directores.add(new Persona("Gabriel", 40, "X"));
+        this.directores.add(new Persona("Gabriel", "Messina", 40, "X"));
         this.directores.add(new Persona("Salvador", 39, "X"));
         this.actores = new ArrayList<>();
         this.actores.add(new Persona("Albano", 38, "X"));

@@ -1,4 +1,5 @@
-package Figuras_Geometricas;
+/*package Figuras_Geometricas;
+
 
 public class Circulo extends FiguraGeometrica{
     private double radio;
@@ -31,3 +32,4 @@ public class Circulo extends FiguraGeometrica{
     }
 }
 
+*/
