@@ -5,19 +5,22 @@ public class Componente {
     private String modelo;
     private double precio;
     private int stock;
+    private String tipo;
 
-    public Componente(String fabricante, String modelo, double precio, int stock) {
+    public Componente(String fabricante, String modelo, double precio, int stock, String tipo) {
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.precio = precio;
         this.stock = stock;
+        this.tipo= tipo;
     }
 
-    public Componente(String modelo, int stock){
+    public Componente(String modelo, int stock, String tipo){
         this.fabricante = "AMD";
         this.modelo = modelo;
         this.precio = 500;
         this.stock = stock;
+        this.tipo = tipo;
     }
 
     public String getFabricante() {
@@ -50,5 +53,13 @@ public class Componente {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
