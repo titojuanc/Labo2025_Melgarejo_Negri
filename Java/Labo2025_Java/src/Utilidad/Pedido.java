@@ -84,8 +84,6 @@ public class Pedido {
         }
     }
 
-    public void
-
     public static void main(String[] args) {
         Alumno alumno = new Alumno("Juan Cruz", "Melgarejo", "3C");
         Profesor profesor = new Profesor("Franco", "Callipo", 15);

@@ -10,6 +10,7 @@ import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PedidoSistema {
     private ArrayList<Pedido> pedidos;
@@ -57,24 +58,26 @@ public class PedidoSistema {
         }
     }
 
-    public void top3Platos(){
+    public ArrayList<Plato> top3Platos(){
         ArrayList<Plato> top3platos = new ArrayList<>();
         for (Pedido p : pedidos){
             p.sumarVecesPedidas();
         }
-        for (Plato pl : platos_ofrece){
-            aux.add(pl);
-        }
         for (int i = 0; i < this.platos_ofrece.size() - 1; i++) {
             for (int j = 0; j < this.platos_ofrece.size() - i - 1; j++) {
                 if (this.platos_ofrece.get(j).getVeces_pedidas() < this.platos_ofrece.get(j + 1).getVeces_pedidas()) {
-                    // Intercambiar si el siguiente es mayor (para orden descendente)
                     Plato temp = this.platos_ofrece.get(j);
-                    this.platos_ofrece.get(j) = this.platos_ofrece.get(j+1);
-                    this.platos_ofrece.get(j+1) = temp;
+                    this.platos_ofrece.set(j, this.platos_ofrece.get(j + 1));
+                    this.platos_ofrece.set(j + 1, temp);
                 }
             }
         }
+        for (int i=0 ; i<this.platos_ofrece.size() - 1; i++){
+            if(i<3){
+                top3platos.add(this.platos_ofrece.get(i));
+            }
+        }
+        return top3platos;
     }
 
     public static void main(String[] args) {
@@ -102,7 +105,15 @@ public class PedidoSistema {
         pedidos.add(pedido1);
         pedidos.add(pedido2);
 
-        PedidoSistema sistema=new PedidoSistema(pedidos);
+        ArrayList<Plato> platos_ofrece = new ArrayList<>();
+        Collections.addAll(platos_ofrece, plato1, plato2, plato3, plato4);
+
+        PedidoSistema sistema=new PedidoSistema(pedidos, platos_ofrece);
         sistema.listaPlatos(LocalDate.now());
+        ArrayList<Plato> top=new ArrayList<>();
+        top=sistema.top3Platos();
+        for (int i=0 ; i<top.size() ; i++){
+            System.out.println(i+1+"- Nombre Plato: "+top.get(i).getNombre());
+        }
     }
 }
