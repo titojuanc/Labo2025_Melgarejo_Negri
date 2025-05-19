@@ -1,5 +1,6 @@
 package Sistemas;
 
+import Objetos.Bicicleta;
 import Objetos.Camioneta;
 import Objetos.Coche;
 import Objetos.Vehiculo;
@@ -25,23 +26,34 @@ public class FlotaSistema {
     public void VehiculoMasPresente(){
         int cantCoches=0;
         int cantCamionetas=0;
-        for (Vehiculo vehiculo : this.vehiculos){
-            if (vehiculo instanceof Coche){
+        int cantBicicletas=0;
+        for (Vehiculo vehiculo : this.vehiculos) {
+            if (vehiculo instanceof Coche) {
                 cantCoches++;
-            }
-            else if (vehiculo instanceof Camioneta){
+            } else if (vehiculo instanceof Camioneta) {
                 cantCamionetas++;
+            } else if (vehiculo instanceof Bicicleta) {
+                cantBicicletas++;
             }
         }
-        if (cantCamionetas>cantCoches){
+        if (cantCamionetas>cantCoches && cantCamionetas>cantBicicletas){
             System.out.println("Hay más camionetas. "+cantCamionetas);
-        } else if (cantCoches>cantCamionetas) {
+        } else if (cantCoches>cantCamionetas && cantCoches>cantBicicletas) {
             System.out.println("Hay más coches. "+cantCoches);
+        } else if (cantBicicletas>cantCamionetas && cantCoches<cantBicicletas){
+            System.out.println("Hay más bicicletas. "+cantBicicletas);
         }
-        else {
-            System.out.println("Hay igual cantidad de coches que de camionetas."+cantCoches+" y "+cantCamionetas);
+        else if (cantBicicletas==cantCamionetas && cantBicicletas!=cantCoches){
+            System.out.println("Hay igual cantidad de bicis que de camionetas");
+        } else if (cantBicicletas==cantCoches && cantBicicletas!=cantCamionetas) {
+            System.out.println("Hay igual cantidad de bicis que de coches");
+        } else if (cantCoches==cantCamionetas && cantBicicletas!=cantCamionetas) {
+            System.out.println("Hay igual cantidad de camionetas que de coches");
+        }else {
+            System.out.println("Hay igual cantidad de los tres vehículos");
         }
     }
+
 
     public void PorcentajeDescapotables(){
         int cantDescapotables=0;

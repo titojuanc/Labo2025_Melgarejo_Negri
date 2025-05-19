@@ -26,11 +26,11 @@ public class Pelicula {
         this.genero = genero;
         this.duracion = duracion;
         this.directores = new ArrayList<>();
-        this.directores.add(new Persona("Gabriel", "Messina", 40, "X"));
-        this.directores.add(new Persona("Salvador", 39, "X"));
+        this.directores.add(new Persona("Gabriel", "Messina", 40));
+        this.directores.add(new Persona("Salvador", "Lopez", 39 ));
         this.actores = new ArrayList<>();
-        this.actores.add(new Persona("Albano", 38, "X"));
-        this.actores.add(new Persona("Javier", 68, "X"));
+        this.actores.add(new Persona("Albano", "Fazzito",38 ));
+        this.actores.add(new Persona("Javier", "Albano", 68 ));
         this.idiomas = new ArrayList<>();
         this.idiomas.add("Español");
     }
@@ -40,11 +40,11 @@ public class Pelicula {
         this.genero = "Accion";
         this.duracion = 90;
         this.directores = new ArrayList<>();
-        this.directores.add(new Persona("Gabriel", 40, "X"));
-        this.directores.add(new Persona("Salvador", 39, "X"));
+        this.directores.add(new Persona("Gabriel", "Messina", 40));
+        this.directores.add(new Persona("Salvador", "Lopez", 39 ));
         this.actores = new ArrayList<>();
-        this.actores.add(new Persona("Albano", 38, "X"));
-        this.actores.add(new Persona("Javier", 68, "X"));
+        this.actores.add(new Persona("Albano", "Fazzito",38 ));
+        this.actores.add(new Persona("Javier", "Albano", 68 ));
         this.idiomas = new ArrayList<>();
         this.idiomas.add("Español");
 
