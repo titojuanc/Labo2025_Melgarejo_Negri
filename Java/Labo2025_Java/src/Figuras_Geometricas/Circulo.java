@@ -1,4 +1,4 @@
-/*package Figuras_Geometricas;
+package Figuras_Geometricas;
 
 
 public class Circulo extends FiguraGeometrica{
@@ -32,4 +32,3 @@ public class Circulo extends FiguraGeometrica{
     }
 }
 
-*/

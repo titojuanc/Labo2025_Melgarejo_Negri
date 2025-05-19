@@ -1,4 +1,4 @@
-/*package Figuras_Geometricas;
+package Figuras_Geometricas;
 
 public class Rectangulo extends FiguraGeometrica {
         private double base;
@@ -41,5 +41,5 @@ public class Rectangulo extends FiguraGeometrica {
             return super.getPerimetro();
         }
     }
-*/
+
 

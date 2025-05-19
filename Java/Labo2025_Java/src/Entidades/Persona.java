@@ -2,8 +2,9 @@ package Entidades;
 
 public class Persona {
     private String nombre;
-    String apellido;
+    private String apellido;
     private int edad;
+    private String direccion;
 
     public Persona(){
         this.nombre="Pedro";
@@ -19,6 +20,12 @@ public class Persona {
     public Persona(String nombre, String apellido){
         this.nombre=nombre;
         this.apellido=apellido;
+    }
+
+    public Persona(String nombre, int edad, String direccion){
+        this.nombre=nombre;
+        this.edad=edad;
+        this.direccion=direccion;
     }
 
     public String getNombre() {
@@ -43,6 +50,14 @@ public class Persona {
 
     public void setEdad(int edad) {
         this.edad = edad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public void imprimirDatos(){

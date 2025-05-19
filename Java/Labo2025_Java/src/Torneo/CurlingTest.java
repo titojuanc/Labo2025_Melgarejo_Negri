@@ -21,17 +21,17 @@ public class CurlingTest {
     public void setUp(){
          s1 = new Curling();
 
-         j1 = new Jugador("Lionel Messi", new Fecha(24, 6, 1987), 10, true);
-         j2 = new Jugador("Emiliano Martínez", new Fecha(2, 9, 1992), 23, false);
-         j3 = new Jugador("Cristian Romero", new Fecha(27, 4, 1998), 13, false);
-         j4 = new Jugador("Nicolás Otamendi", new Fecha(12, 2, 1988), 19, false);
-         j5 = new Jugador("Nahuel Molina", new Fecha(6, 4, 1998), 26, false);
-         j6 = new Jugador("Marcos Acuña", new Fecha(28, 10, 1991), 8, false);
-         j7 = new Jugador("Rodrigo De Paul", new Fecha(24, 5, 1994), 7, false);
-         j8 = new Jugador("Leandro Paredes", new Fecha(29, 6, 1994), 5, false);
-         j9 = new Jugador("Alexis Mac Allister", new Fecha(24, 12, 1998), 20, false);
-         j10 = new Jugador("Ángel Di María", new Fecha(14, 2, 1988), 11, false);
-         j11 = new Jugador("Julián Álvarez", new Fecha(31, 1, 2000), 9, false);
+        Jugador j1 = new Jugador("Lionel" ,"Messi", new Fecha(24, 6, 1987), 10, true);
+        Jugador j2 = new Jugador("Emiliano" ,"Martínez", new Fecha(2, 9, 1992), 23, false);
+        Jugador j3 = new Jugador("Cristian" ,"Romero", new Fecha(27, 4, 1998), 13, false);
+        Jugador j4 = new Jugador("Nicolás" ,"Otamendi", new Fecha(12, 2, 1988), 19, false);
+        Jugador j5 = new Jugador("Nahuel" ,"Molina", new Fecha(6, 4, 1998), 26, false);
+        Jugador j6 = new Jugador("Marcos","Acuña", new Fecha(28, 10, 1991), 8, false);
+        Jugador j7 = new Jugador("Rodrigo","De Paul", new Fecha(24, 5, 1994), 7, false);
+        Jugador j8 = new Jugador("Leandro" ,"Paredes", new Fecha(29, 6, 1994), 5, false);
+        Jugador j9 = new Jugador("Alexis" ,"Mac Allister", new Fecha(24, 12, 1998), 20, false);
+        Jugador j10 = new Jugador("Ángel", "Di María", new Fecha(14, 2, 1988), 11, false);
+        Jugador j11 = new Jugador("Julian", "Alvarez", new Fecha(31, 1, 2000), 9, false);
 
          jugadores_main= new ArrayList<Jugador>();
 

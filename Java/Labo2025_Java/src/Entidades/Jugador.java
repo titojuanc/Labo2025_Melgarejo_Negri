@@ -21,6 +21,15 @@ public class Jugador extends Persona{
         this.capitan = capitan;
     }
 
+    public Jugador(String nombre, String apellido, Fecha fechaNacimiento ,int numeroCamiseta, boolean capitan) {
+        super(nombre, apellido);
+        this.fechaNacimiento=fechaNacimiento;
+        this.numeroCamiseta = numeroCamiseta;
+        this.capitan=capitan;
+    }
+
+
+
     public int getNumeroCamiseta() {
         return numeroCamiseta;
     }
