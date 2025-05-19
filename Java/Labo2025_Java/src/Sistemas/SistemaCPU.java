@@ -13,6 +13,8 @@ public class SistemaCPU {
 
     public SistemaCPU(){
         this.compras= new ArrayList<>();
+        this.carrito= new ArrayList<>();
+        this.listado= new ArrayList<>();
     }
 
     public ArrayList<Compra> getCompras() {
@@ -69,6 +71,16 @@ public class SistemaCPU {
     }
 
     public static void main(String[] args) {
-
+        SistemaCPU sistema = new SistemaCPU();
+        Componente c1 = new Componente("HP", "Pavilion 500", 299.99, 10, "Impresora");
+        Componente c2 = new Componente("Logitech", "MX Master 3", 89.99, 15, "Mouse");
+        Componente c3 = new Componente("Razer", "BlackWidow", 149.99, 8, "Teclado");
+        Componente c4 = new Componente("Dell", "UltraSharp 27", 399.99, 0, "Pantalla");  // Stock 0
+        Componente c5 = new Componente("Intel", "Core i9-13900K", 549.99, 5, "CPU");
+        Componente c6 = new Componente("Epson", "EcoTank ET-3850", 249.99, 7, "Impresora");
+        Componente c7 = new Componente("Microsoft", "Surface Mouse", 59.99, 20, "Mouse");
+        Componente c8 = new Componente("Corsair", "K95 RGB Platinum", 199.99, 3, "Teclado");
+        Componente c9 = new Componente("Samsung", "Odyssey G7", 699.99, 4, "Pantalla");
+        Componente c10 = new Componente("AMD", "Ryzen 9 7950X", 499.99, 6, "CPU");
     }
 }
