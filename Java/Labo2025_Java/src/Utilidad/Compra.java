@@ -10,9 +10,29 @@ public class Compra {
     private ArrayList<Componente> componentes;
     private Cliente cliente;
 
-    public Compra(ArrayList<Componente> componentes, Cliente cliente){
-        this.componentes=componentes;
+    public Compra(Cliente cliente){
+        this.componentes=new ArrayList<>();
         this.cliente=cliente;
+    }
+
+    public ArrayList<Componente> getComponentes() {
+        return componentes;
+    }
+
+    public void setComponentes(ArrayList<Componente> componentes) {
+        this.componentes = componentes;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void sumarComponente(Componente componente){
+        this.componentes.add(componente);
     }
 
     public double total(){
