@@ -67,6 +67,16 @@ public class SistemaLlamadas {
         }
     }
 
+    public int numeroLlamadasPorEmpleado(Empleado empleado) {
+        int cont = 0;
+        for (Llamada llamada : this.llamadas) {
+            if (llamada.getEmpleado_origen().equals(empleado)) {
+                cont = cont + 1;
+            }
+        }
+        return cont;
+    }
+
     public void rankingTiempoAlExterior(){
         int cont=0;
         System.out.println("Ranking de horas en el exterior");

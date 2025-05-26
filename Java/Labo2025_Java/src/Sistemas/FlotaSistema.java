@@ -6,7 +6,8 @@ import Objetos.Coche;
 import Objetos.Vehiculo;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import  java.util.Collections;
+
 
 public class FlotaSistema {
     private ArrayList<Vehiculo> vehiculos;
@@ -23,10 +24,10 @@ public class FlotaSistema {
         this.vehiculos = vehiculos;
     }
 
-    public void VehiculoMasPresente(){
-        int cantCoches=0;
-        int cantCamionetas=0;
-        int cantBicicletas=0;
+    public String vehiculoMasPresente() {
+        int cantCoches = 0;
+        int cantCamionetas = 0;
+        int cantBicicletas = 0;
         for (Vehiculo vehiculo : this.vehiculos) {
             if (vehiculo instanceof Coche) {
                 cantCoches++;
@@ -36,28 +37,27 @@ public class FlotaSistema {
                 cantBicicletas++;
             }
         }
-        if (cantCamionetas>cantCoches && cantCamionetas>cantBicicletas){
-            System.out.println("Hay más camionetas. "+cantCamionetas);
-        } else if (cantCoches>cantCamionetas && cantCoches>cantBicicletas) {
-            System.out.println("Hay más coches. "+cantCoches);
-        } else if (cantBicicletas>cantCamionetas && cantCoches<cantBicicletas){
-            System.out.println("Hay más bicicletas. "+cantBicicletas);
-        }
-        else if (cantBicicletas==cantCamionetas && cantBicicletas!=cantCoches){
-            System.out.println("Hay igual cantidad de bicis que de camionetas");
-        } else if (cantBicicletas==cantCoches && cantBicicletas!=cantCamionetas) {
-            System.out.println("Hay igual cantidad de bicis que de coches");
-        } else if (cantCoches==cantCamionetas && cantBicicletas!=cantCamionetas) {
-            System.out.println("Hay igual cantidad de camionetas que de coches");
-        }else {
-            System.out.println("Hay igual cantidad de los tres vehículos");
+        if (cantCamionetas > cantCoches && cantCamionetas > cantBicicletas) {
+            return "Hay más camionetas. " + cantCamionetas;
+        } else if (cantCoches > cantCamionetas && cantCoches > cantBicicletas) {
+            return "Hay más coches. " + cantCoches;
+        } else if (cantBicicletas > cantCamionetas && cantBicicletas > cantCoches) {
+            return "Hay más bicicletas. " + cantBicicletas;
+        } else if (cantBicicletas == cantCamionetas && cantBicicletas != cantCoches) {
+            return "Hay igual cantidad de bicis que de camionetas";
+        } else if (cantBicicletas == cantCoches && cantBicicletas != cantCamionetas) {
+            return "Hay igual cantidad de bicis que de coches";
+        } else if (cantCoches == cantCamionetas && cantBicicletas != cantCamionetas) {
+            return "Hay igual cantidad de camionetas que de coches";
+        } else {
+            return "Hay igual cantidad de los tres vehículos";
         }
     }
 
 
-    public void PorcentajeDescapotables(){
-        int cantDescapotables=0;
-        int cantCoches=0;
+    public double PorcentajeDescapotables(){
+        double cantDescapotables=0;
+        double cantCoches=0;
         for (Vehiculo vehiculo : this.vehiculos){
             if (vehiculo instanceof Coche){
                 cantCoches++;
@@ -66,7 +66,7 @@ public class FlotaSistema {
                 }
             }
         }
-        System.out.println("Hay un "+(cantCoches/cantDescapotables)*100+"% de coches descapotables");
+        return ((cantDescapotables/cantCoches)*100);
     }
 
     public static void main(String[] args) {
@@ -87,11 +87,11 @@ public class FlotaSistema {
 
         Collections.addAll(flota.getVehiculos(), c1, c2, c3, c4, c5, c6, cam1, cam2, cam3, cam4, cam5, cam6);
 
-        flota.VehiculoMasPresente();
+        System.out.println(flota.vehiculoMasPresente());
         cam1.anadirCarga(500);
         System.out.println(cam1.getCarga());
         cam1.anadirCarga(9999);
-        flota.PorcentajeDescapotables();
+        System.out.println(flota.PorcentajeDescapotables());
 
     }
 }
