@@ -12,6 +12,9 @@ public class SensorTemperatura extends  Sensor{
     }
 
     public String imprimirDeteccion(){
-        return "¡Cuidado! La temperatura sube";
+        if(isEstado()){
+            return "¡Cuidado! La temperatura sube";
+        }
+        return "Sensor Apagado";
     }
 }

@@ -12,6 +12,9 @@ public class SensorPresion extends Sensor{
     }
 
     public String imprimirDeteccion(){
-        return "Sensor de presión activado";
+        if(isEstado()){
+            return "Sensor de presión activado";
+        }
+        return "Sensor Apagado";
     }
 }

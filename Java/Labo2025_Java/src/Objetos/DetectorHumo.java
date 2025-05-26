@@ -13,6 +13,9 @@ public class DetectorHumo extends Sensor {
     }
 
     public String imprimirDeteccion(){
-        return "Llamando a los Bomberos";
+        if (isEstado()){
+            return "Llamando a los Bomberos";
+        }
+        return "Sensor Apagado";
     }
 }

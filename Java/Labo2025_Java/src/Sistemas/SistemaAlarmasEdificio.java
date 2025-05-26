@@ -26,19 +26,23 @@ public class SistemaAlarmasEdificio {
         this.sensores = sensores;
     }
 
-    public void Medir(){
+    public int Medir(){
+        int cont=0;
         for(Sensor s : this.sensores){
             if (s.getMedida()>s.getUmbral() && s.isEstado()){
                 if (s instanceof SensorCompuesto){
                     for (Sensor se : ((SensorCompuesto) s).getSensorCompuesto()){
                         if (se.getMedida()>se.getUmbral() && se.isEstado()){
                             System.out.println(se.imprimirDeteccion());
+                            cont+=1;
                         }
                     }
                 }
                 System.out.println(s.imprimirDeteccion());
+                cont+=1;
             }
         }
+        return cont;
     }
 
     public static void main(String[] args) {

@@ -50,12 +50,15 @@ public class PedidoSistema {
         this.pedidos.add(pedido_nuevo);
     }
 
-    public void listaPlatos(LocalDate fecha){
+    public ArrayList<Pedido> listaPlatos(LocalDate fecha){
+        ArrayList<Pedido> ped=new ArrayList<>();
         for (Pedido p : this.pedidos){
             if (p.getFecha().equals(fecha)){
                 p.nombrePrecioPlato();
+                ped.add(p);
             }
         }
+        return ped;
     }
 
     public ArrayList<Plato> top3Platos(){
@@ -98,7 +101,7 @@ public class PedidoSistema {
         platos2.add(plato4);
 
         Pedido pedido1=new Pedido(LocalDate.now(), platos1, alumno, LocalTime.now(),"En Produccion");
-        Pedido pedido2=new Pedido(LocalDate.now(), platos2, profesor, LocalTime.now(), "En Produccion");
+        Pedido pedido2=new Pedido(LocalDate.of(2022,2,2), platos2, profesor, LocalTime.now(), "En Produccion");
 
         ArrayList<Pedido> pedidos= new ArrayList<>();
 
@@ -109,7 +112,7 @@ public class PedidoSistema {
         Collections.addAll(platos_ofrece, plato1, plato2, plato3, plato4);
 
         PedidoSistema sistema=new PedidoSistema(pedidos, platos_ofrece);
-        sistema.listaPlatos(LocalDate.now());
+        ArrayList<Pedido> ped=sistema.listaPlatos(LocalDate.now());
         ArrayList<Plato> top=new ArrayList<>();
         top=sistema.top3Platos();
         for (int i=0 ; i<top.size() ; i++){

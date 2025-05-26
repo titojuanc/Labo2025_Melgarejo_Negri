@@ -64,6 +64,19 @@ public class Pedido {
         this.estado = estado;
     }
 
+    public void agregarPlato(Plato plato){
+        this.platos.add(plato);
+    }
+
+    public void eliminarPlato(Plato plato){
+        this.platos.remove(plato);
+    }
+
+    public void modificarPlato(Plato nuevo, Plato viejo){
+        eliminarPlato(viejo);
+        agregarPlato(nuevo);
+    }
+
     public void nombrePrecioPlato(){
         for (Plato p : platos){
             if (solicitante instanceof Alumno){
