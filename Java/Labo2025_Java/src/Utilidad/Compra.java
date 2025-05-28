@@ -63,6 +63,12 @@ public class Compra {
         System.out.println("Cantidad de componentes de entrada: "+cantEntrada);
         System.out.println("Cantidad de componentes de salida: "+cantSalida);
     }
+
+    /* Realmente hacer herencias acá es casi imperceptible.
+    Si se quieren agregar nuevos tipos de periféricos,
+    se agregan al IF correspondiente
+    ya que la distinción entre entrada y salida se ve solo acá. */
+
 }
 
 
