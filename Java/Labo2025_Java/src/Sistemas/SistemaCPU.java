@@ -7,6 +7,9 @@ import Utilidad.Compra;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/* Se podría haber implementado herencias en clases Salida, Entrada y CPU
+    que vengan de Componente */
+
 public class SistemaCPU {
     private ArrayList<Compra> compras;
     private ArrayList<Componente> carrito;
