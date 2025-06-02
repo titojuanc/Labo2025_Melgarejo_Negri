@@ -1,21 +1,23 @@
 package Entidades;
 
+import Enumeraciones.Disponibilidad;
+
 import java.util.ArrayList;
 
 public class Equipo {
     private String nombre;
     private String barrioProcedencia;
     private ArrayList<Jugador> jugadores;
-    private String disponibilidad;
+    private Disponibilidad disponibilidad;
 
     public Equipo() {
         this.nombre="";
         this.barrioProcedencia="";
         this.jugadores=new ArrayList<>();
-        this.disponibilidad="mañana";
+        this.disponibilidad = Disponibilidad.MANANA;
     }
 
-    public Equipo(String nombre, String barrioProcedencia, ArrayList<Jugador> jugadores, String disponibilidad) {
+    public Equipo(String nombre, String barrioProcedencia, ArrayList<Jugador> jugadores, Disponibilidad disponibilidad) {
         this.nombre = nombre;
         this.barrioProcedencia = barrioProcedencia;
         this.jugadores = jugadores;
@@ -46,11 +48,11 @@ public class Equipo {
         this.jugadores = jugadores;
     }
 
-    public String getDisponibilidad() {
+    public Disponibilidad getDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(String disponibilidad) {
+    public void setDisponibilidad(Disponibilidad disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
 }

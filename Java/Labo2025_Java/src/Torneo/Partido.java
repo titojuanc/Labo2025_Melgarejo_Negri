@@ -1,24 +1,25 @@
-package SinClasificar;
+package Torneo;
 
 import Entidades.Equipo;
+import Enumeraciones.Disponibilidad;
 import Utilidad.Fecha;
 
 import java.time.LocalDate;
 
 public class Partido {
     private LocalDate fechaPartido;
-    private String turno;
+    private Disponibilidad turno;
     private Equipo equipoLocal;
     private Equipo equipoVisitante;
 
     public Partido(){
         this.fechaPartido=LocalDate.now();
-        this.turno="";
+        this.turno=Disponibilidad.MANANA;
         this.equipoLocal=new Equipo();
         this.equipoVisitante=new Equipo();
     }
 
-    public Partido(LocalDate fechaPartido, String turno, Equipo equipoLocal, Equipo equipoVisitante) {
+    public Partido(LocalDate fechaPartido, Disponibilidad turno, Equipo equipoLocal, Equipo equipoVisitante) {
         this.fechaPartido = fechaPartido;
         this.turno = turno;
         this.equipoLocal = equipoLocal;
@@ -33,11 +34,11 @@ public class Partido {
         this.fechaPartido = fechaPartido;
     }
 
-    public String getTurno() {
+    public Disponibilidad getTurno() {
         return turno;
     }
 
-    public void setTurno(String turno) {
+    public void setTurno(Disponibilidad turno) {
         this.turno = turno;
     }
 
