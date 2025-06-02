@@ -52,6 +52,7 @@ public class TestCPU {
         sistema.comprar(cliente1);
         assertEquals(1, sistema.getCompras().size());
         assertEquals(902.9685000000001, sistema.getCompras().getFirst().total(),902.9685000000001 );
+        assertEquals("Salvador", sistema.getCompras().getFirst().getCliente().getNombre());
     }
 }
 
