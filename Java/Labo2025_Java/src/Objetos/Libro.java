@@ -1,4 +1,4 @@
-/*package Objetos;
+package Objetos;
 
 import Entidades.Persona;
 import Utilidad.Fecha;
@@ -116,4 +116,3 @@ public class Libro {
         System.out.println(libro2.compararFecha(libro1));
     }
 }
-*/
