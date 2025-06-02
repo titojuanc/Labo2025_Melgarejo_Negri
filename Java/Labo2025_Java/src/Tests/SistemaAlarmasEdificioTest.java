@@ -1,6 +1,7 @@
-package Sistemas;
+package Tests;
 
 import Objetos.*;
+import Sistemas.SistemaAlarmasEdificio;
 import org.junit.Before;
 import org.junit.Test;
 
