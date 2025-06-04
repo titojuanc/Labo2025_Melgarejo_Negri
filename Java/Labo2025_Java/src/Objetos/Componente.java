@@ -1,13 +1,16 @@
 package Objetos;
 
+import Enumeraciones.Fabricantes;
+import Enumeraciones.TiposDeComponente;
+
 public class Componente {
-    private String fabricante;
+    private Fabricantes fabricante;
     private String modelo;
     private double precio;
     private int stock;
-    private String tipo;
+    private TiposDeComponente tipo;
 
-    public Componente(String fabricante, String modelo, double precio, int stock, String tipo) {
+    public Componente(Fabricantes fabricante, String modelo, double precio, int stock, TiposDeComponente tipo) {
         this.fabricante = fabricante;
         this.modelo = modelo;
         this.precio = precio;
@@ -15,19 +18,19 @@ public class Componente {
         this.tipo= tipo;
     }
 
-    public Componente(String modelo, int stock, String tipo){
-        this.fabricante = "AMD";
+    public Componente(String modelo, int stock, TiposDeComponente tipo){
+        this.fabricante = Fabricantes.AMD;
         this.modelo = modelo;
         this.precio = 500;
         this.stock = stock;
         this.tipo = tipo;
     }
 
-    public String getFabricante() {
+    public Fabricantes getFabricante() {
         return fabricante;
     }
 
-    public void setFabricante(String fabricante) {
+    public void setFabricante(Fabricantes fabricante) {
         this.fabricante = fabricante;
     }
 
@@ -55,11 +58,11 @@ public class Componente {
         this.stock = stock;
     }
 
-    public String getTipo() {
+    public TiposDeComponente getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TiposDeComponente tipo) {
         this.tipo = tipo;
     }
 }

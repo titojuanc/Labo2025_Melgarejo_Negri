@@ -4,7 +4,6 @@ import Entidades.Cliente;
 import Objetos.Componente;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Compra {
     private ArrayList<Componente> componentes;
@@ -40,7 +39,7 @@ public class Compra {
         for (Componente componente : this.componentes){
             precioTotal=precioTotal+(componente.getPrecio());
         }
-        if (this.cliente.getMetodo()=="Tarjeta"){
+        if (this.cliente.getMetodo().name().equals("TARJETA")){
             return precioTotal*1.05;
         }
         else {
@@ -53,10 +52,10 @@ public class Compra {
         int cantEntrada=0;
         int cantSalida=0;
         for (Componente componente : this.componentes){
-            if (componente.getTipo() == "Teclado" || componente.getTipo()=="Mouse"){
+            if (componente.getTipo().name().toLowerCase().equals("teclado") || componente.getTipo().name().toLowerCase().equals("mouse")){
                 cantEntrada++;
             }
-            else if (componente.getTipo() == "Impresora" || componente.getTipo()=="Pantalla"){
+            else if (componente.getTipo().name().toLowerCase().equals("impresora") || componente.getTipo().name().toLowerCase().equals("pantalla")){
                 cantSalida++;
             }
         }

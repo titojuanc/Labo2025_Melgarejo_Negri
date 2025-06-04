@@ -1,7 +1,6 @@
 package Objetos;
 
 import Entidades.Persona;
-import Enumeraciones.Editoriales;
 import Utilidad.Fecha;
 
 public class Libro {

@@ -3,8 +3,6 @@ package Tests;
 
 import Entidades.Cliente;
 import Objetos.Componente;
-import Sistemas.SistemaCPU;
-import Utilidad.Compra;
 import org.junit.Before;
 import org.junit.Test;
 
