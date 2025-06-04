@@ -94,7 +94,7 @@ public class Libro {
         System.out.println("Autor Direccion: "+this.autor.getDireccion());
         System.out.println("ISBN: "+this.isbn);
         System.out.println("Paginas: "+this.paginas);
-        System.out.println("Editorial: "+this.editorial);
+        System.out.println("Editorial: "+this.editorial.getNombre());
         System.out.println("Utilidad.Fecha Dia: "+this.fecha.getDia());
         System.out.println("Utilidad.Fecha Mes: "+this.fecha.getMes());
         System.out.println("Utilidad.Fecha Año: "+this.fecha.getAnio());

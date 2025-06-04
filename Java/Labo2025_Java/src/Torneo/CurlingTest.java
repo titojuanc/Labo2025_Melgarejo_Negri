@@ -2,6 +2,7 @@ package Torneo;
 
 import Entidades.Equipo;
 import Entidades.Jugador;
+import Enumeraciones.Disponibilidad;
 import Utilidad.Fecha;
 
 import org.junit.Before;
@@ -37,19 +38,19 @@ public class CurlingTest {
 
         Collections.addAll(jugadores_main,j1,j2,j3,j4,j5,j6,j7,j8,j9,j10,j11);
 
-         e1 = new Equipo("Poli", "barrio", jugadores_main, "manana");
-         e2 = new Equipo("Poli1", "barrio", jugadores_main, "manana");
-         e3 = new Equipo("Poli2", "barrio", jugadores_main, "manana");
-         e4 = new Equipo("Poli3", "barrio", jugadores_main, "tarde");
-         e5 = new Equipo("Poli4", "barrio", jugadores_main, "tarde");
-         e6 = new Equipo("Poli5", "barrio", jugadores_main, "noche");
-         e7 = new Equipo("Poli6", "barrio", jugadores_main, "noche");
-         e8 = new Equipo("Poli7", "barrio", jugadores_main, "manana");
-         e9 = new Equipo("Poli8", "barrio", jugadores_main, "manana");
-         e10 = new Equipo("Poli9", "barrio", jugadores_main, "tarde");
-         e11 = new Equipo("Poli10", "barrio", jugadores_main, "tarde");
-         e12 = new Equipo("Poli11", "barrio", jugadores_main, "noche");
-         e13 = new Equipo("Poli12", "barrio", jugadores_main, "noche");
+         e1 = new Equipo("Poli", "barrio", jugadores_main, Disponibilidad.MANANA);
+         e2 = new Equipo("Poli1", "barrio", jugadores_main, Disponibilidad.MANANA);
+         e3 = new Equipo("Poli2", "barrio", jugadores_main, Disponibilidad.MANANA);
+         e4 = new Equipo("Poli3", "barrio", jugadores_main, Disponibilidad.TARDE);
+         e5 = new Equipo("Poli4", "barrio", jugadores_main, Disponibilidad.TARDE);
+         e6 = new Equipo("Poli5", "barrio", jugadores_main, Disponibilidad.NOCHE);
+         e7 = new Equipo("Poli6", "barrio", jugadores_main, Disponibilidad.NOCHE);
+         e8 = new Equipo("Poli7", "barrio", jugadores_main, Disponibilidad.MANANA);
+         e9 = new Equipo("Poli8", "barrio", jugadores_main, Disponibilidad.MANANA);
+         e10 = new Equipo("Poli9", "barrio", jugadores_main, Disponibilidad.TARDE);
+         e11 = new Equipo("Poli10", "barrio", jugadores_main, Disponibilidad.TARDE);
+         e12 = new Equipo("Poli11", "barrio", jugadores_main, Disponibilidad.NOCHE);
+         e13 = new Equipo("Poli12", "barrio", jugadores_main, Disponibilidad.NOCHE);
 
         Collections.addAll(s1.getEquipos(), e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13);
     }
