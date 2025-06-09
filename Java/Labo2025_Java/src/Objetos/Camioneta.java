@@ -1,12 +1,12 @@
 package Objetos;
 
-import Enumeraciones.Colores;
+import Enumeraciones.Color;
 
 public class Camioneta extends Vehiculo{
     private int cargaMax;
     private int carga;
 
-    public Camioneta(String marca, String modelo, Colores color, int ruedas, int anio_f, String patente, int cargaMax){
+    public Camioneta(String marca, String modelo, Color color, int ruedas, int anio_f, String patente, int cargaMax){
         super(marca, modelo, color, ruedas, anio_f, patente);
         this.cargaMax = cargaMax;
         this.carga =0;

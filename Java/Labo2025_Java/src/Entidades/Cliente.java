@@ -1,12 +1,12 @@
 package Entidades;
 
-import Enumeraciones.MetodosDePago;
+import Enumeraciones.MetodoDePago;
 
 public class Cliente extends Persona {
     private int celular;
-    private MetodosDePago metodo;
+    private MetodoDePago metodo;
 
-    public Cliente(String nombre, String apellido, int edad, MetodosDePago metodo, int celular) {
+    public Cliente(String nombre, String apellido, int edad, MetodoDePago metodo, int celular) {
         super(nombre, apellido, edad);
         this.metodo = metodo;
         this.celular = celular;
@@ -14,7 +14,7 @@ public class Cliente extends Persona {
 
     public Cliente() {
         super("Carlos", "Jonte", 45);
-        this.metodo = MetodosDePago.TARJETA;
+        this.metodo = MetodoDePago.TARJETA;
         this.celular = 23548754;
     }
 
@@ -26,11 +26,11 @@ public class Cliente extends Persona {
         this.celular = celular;
     }
 
-    public MetodosDePago getMetodo() {
+    public MetodoDePago getMetodo() {
         return metodo;
     }
 
-    public void setMetodo(MetodosDePago metodo) {
+    public void setMetodo(MetodoDePago metodo) {
         this.metodo = metodo;
     }
 }

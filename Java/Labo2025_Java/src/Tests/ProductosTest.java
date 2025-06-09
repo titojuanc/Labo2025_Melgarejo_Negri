@@ -25,6 +25,11 @@ public class ProductosTest {
     }
 
     @Test
+    public void testCantidad(){
+        assertEquals(sistema.tamañoCarrito(), 4);
+    }
+
+    @Test
     public void TestMayorMenor(){
         assertEquals(p4, sistema.mayorStock());
         assertEquals(p3, sistema.menorStock());

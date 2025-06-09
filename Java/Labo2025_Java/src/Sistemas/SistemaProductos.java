@@ -23,6 +23,10 @@ public class SistemaProductos {
         this.productos.remove(producto);
     }
 
+    public int tamañoCarrito(){
+        return this.productos.size();
+    }
+
     public Producto mayorStock(){
         Producto mayorStock= this.productos.getFirst();
         for (Producto p : this.productos){

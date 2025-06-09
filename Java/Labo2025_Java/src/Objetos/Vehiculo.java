@@ -1,16 +1,16 @@
 package Objetos;
 
-import Enumeraciones.Colores;
+import Enumeraciones.Color;
 
 public class Vehiculo {
     private String marca;
     private String modelo;
-    private Colores color;
+    private Color color;
     private int ruedas;
     private int anio_f;
     private String patente;
 
-    public Vehiculo(String marca, String modelo, Colores color, int ruedas, int anio_f, String patente){
+    public Vehiculo(String marca, String modelo, Color color, int ruedas, int anio_f, String patente){
             this.marca = marca;
             this.modelo = modelo;
             this.color = color;
@@ -35,11 +35,11 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    public Colores getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(Colores color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 

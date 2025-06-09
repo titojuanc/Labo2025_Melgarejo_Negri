@@ -1,5 +1,5 @@
 package Enumeraciones;
 
-public enum MetodosDePago {
+public enum MetodoDePago {
     TARJETA, EFECTIVO, TRANSFERENCIA
 }

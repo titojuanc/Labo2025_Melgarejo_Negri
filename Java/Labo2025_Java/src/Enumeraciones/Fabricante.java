@@ -1,5 +1,5 @@
 package Enumeraciones;
 
-public enum Fabricantes {
+public enum Fabricante {
     HP, LOGITECH, RAZER, DELL, INTEL, EPSON, MICROSOFT, CORSAIR, SAMSUNG, AMD
 }

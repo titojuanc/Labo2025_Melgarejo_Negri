@@ -1,5 +1,5 @@
 package Enumeraciones;
 
-public enum TiposDeComponente {
+public enum TipoDeComponente {
     IMPRESORA, MOUSE, TECLADO, PANTALLA, CPU
 }

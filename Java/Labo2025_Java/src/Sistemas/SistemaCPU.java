@@ -1,9 +1,9 @@
 package Sistemas;
 
 import Entidades.Cliente;
-import Enumeraciones.Fabricantes;
-import Enumeraciones.MetodosDePago;
-import Enumeraciones.TiposDeComponente;
+import Enumeraciones.Fabricante;
+import Enumeraciones.MetodoDePago;
+import Enumeraciones.TipoDeComponente;
 import Objetos.Componente;
 import Utilidad.Compra;
 
@@ -105,21 +105,21 @@ public class SistemaCPU {
     public static void main(String[] args) {
         SistemaCPU sistema = new SistemaCPU();
         ArrayList<Componente> componentes = new ArrayList<>();
-        Componente c1 = new Componente(Fabricantes.HP, "Pavilion 500", 299.99, 10, TiposDeComponente.IMPRESORA);
-        Componente c2 = new Componente(Fabricantes.LOGITECH, "MX Master 3", 89.99, 15, TiposDeComponente.MOUSE);
-        Componente c3 = new Componente(Fabricantes.RAZER, "BlackWidow", 149.99, 8, TiposDeComponente.TECLADO);
-        Componente c4 = new Componente(Fabricantes.DELL, "UltraSharp 27", 399.99, 0, TiposDeComponente.PANTALLA);  // Stock 0
-        Componente c5 = new Componente(Fabricantes.INTEL, "Core i9-13900K", 549.99, 5, TiposDeComponente.CPU);
-        Componente c6 = new Componente(Fabricantes.EPSON, "EcoTank ET-3850", 249.99, 7, TiposDeComponente.IMPRESORA);
-        Componente c7 = new Componente(Fabricantes.MICROSOFT, "Surface Mouse", 59.99, 20, TiposDeComponente.MOUSE);
-        Componente c8 = new Componente(Fabricantes.CORSAIR, "K95 RGB Platinum", 199.99, 3, TiposDeComponente.TECLADO);
-        Componente c9 = new Componente(Fabricantes.SAMSUNG, "Odyssey G7", 699.99, 4, TiposDeComponente.PANTALLA);
-        Componente c10 = new Componente(Fabricantes.AMD, "Ryzen 9 7950X", 499.99, 6, TiposDeComponente.CPU);
+        Componente c1 = new Componente(Fabricante.HP, "Pavilion 500", 299.99, 10, TipoDeComponente.IMPRESORA);
+        Componente c2 = new Componente(Fabricante.LOGITECH, "MX Master 3", 89.99, 15, TipoDeComponente.MOUSE);
+        Componente c3 = new Componente(Fabricante.RAZER, "BlackWidow", 149.99, 8, TipoDeComponente.TECLADO);
+        Componente c4 = new Componente(Fabricante.DELL, "UltraSharp 27", 399.99, 0, TipoDeComponente.PANTALLA);  // Stock 0
+        Componente c5 = new Componente(Fabricante.INTEL, "Core i9-13900K", 549.99, 5, TipoDeComponente.CPU);
+        Componente c6 = new Componente(Fabricante.EPSON, "EcoTank ET-3850", 249.99, 7, TipoDeComponente.IMPRESORA);
+        Componente c7 = new Componente(Fabricante.MICROSOFT, "Surface Mouse", 59.99, 20, TipoDeComponente.MOUSE);
+        Componente c8 = new Componente(Fabricante.CORSAIR, "K95 RGB Platinum", 199.99, 3, TipoDeComponente.TECLADO);
+        Componente c9 = new Componente(Fabricante.SAMSUNG, "Odyssey G7", 699.99, 4, TipoDeComponente.PANTALLA);
+        Componente c10 = new Componente(Fabricante.AMD, "Ryzen 9 7950X", 499.99, 6, TipoDeComponente.CPU);
         Collections.addAll(componentes, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10);
         sistema.setListado(componentes);
 
-        Cliente cliente1 = new Cliente("Salvador", "Lopez Calo", 16, MetodosDePago.TARJETA, 1534420897);
-        Cliente cliente2 = new Cliente("Gabriel", "Messina", 17, MetodosDePago.TRANSFERENCIA, 153428240);
+        Cliente cliente1 = new Cliente("Salvador", "Lopez Calo", 16, MetodoDePago.TARJETA, 1534420897);
+        Cliente cliente2 = new Cliente("Gabriel", "Messina", 17, MetodoDePago.TRANSFERENCIA, 153428240);
         sistema.agregarAlCarrito(c10);
         sistema.agregarAlCarrito(c1);
         sistema.agregarAlCarrito(c4);
