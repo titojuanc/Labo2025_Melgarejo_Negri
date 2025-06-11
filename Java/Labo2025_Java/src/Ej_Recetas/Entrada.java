@@ -1,5 +1,8 @@
 package Ej_Recetas;
 
+import Enumeraciones.Dificultad;
+import Enumeraciones.TemperaturaServido;
+
 import java.util.ArrayList;
 
 public class Entrada extends Platillo{
@@ -19,6 +22,11 @@ public class Entrada extends Platillo{
             System.out.println("RECORDAD: prenda el horno");
             mostrar_pasos();
         }
+    }
+
+    @Override
+    String tipo() {
+        return "Entrada";
     }
 }
 

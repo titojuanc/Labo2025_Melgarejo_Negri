@@ -2,9 +2,9 @@ package Sistemas;
 
 import Enumeraciones.Tecnologia;
 import Objetos.Cargador;
-import Objetos.EquipoSonido;
+import Dispositivos.EquipoSonido;
 import Objetos.Producto;
-import Objetos.Televisor;
+import Dispositivos.Televisor;
 
 import java.util.ArrayList;
 

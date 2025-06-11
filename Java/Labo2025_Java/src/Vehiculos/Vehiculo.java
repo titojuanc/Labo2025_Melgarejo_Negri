@@ -1,8 +1,8 @@
-package Objetos;
+package Vehiculos;
 
 import Enumeraciones.Color;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private String marca;
     private String modelo;
     private Color color;

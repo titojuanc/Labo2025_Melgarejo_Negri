@@ -1,5 +1,6 @@
 package RepasoEv1205;
 
+import Entidades.Director;
 import Entidades.Persona;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class Pelicula {
         this.nombre="Harry Potter";
         this.genero="Fantastico";
         this.duracion=0;
-        this.director=new Persona("Yo", 10, "aca");
+        this.director=new Director("Yo", 10, "aca");
         this.actores=new ArrayList<>();
         this.idiomas=new ArrayList<>();
         idiomas.add("ingles");
@@ -26,7 +27,7 @@ public class Pelicula {
         this.nombre = nombre;
         this.genero = genero;
         this.duracion = duracion;
-        this.director = new Persona(director.getNombre(), director.getEdad(), director.getDireccion());
+        this.director = new Director(director.getNombre(), director.getEdad(), director.getDireccion());
         this.actores = actores;
         this.idiomas = idiomas;
     }

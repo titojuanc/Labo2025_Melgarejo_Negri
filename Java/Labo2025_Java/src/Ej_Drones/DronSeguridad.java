@@ -11,7 +11,7 @@ public class DronSeguridad extends Dron{
     }
 
     @Override
-    boolean ejecutarMision(double latitud, double longuitud) {
+    public boolean ejecutarMision(double latitud, double longuitud) {
         double kilometros= distanciaEnKm(latitud, longuitud);
         if (((int) kilometros/2) * 12 <= memoriaSD){
             return true;

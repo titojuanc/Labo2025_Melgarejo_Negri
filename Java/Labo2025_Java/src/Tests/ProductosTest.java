@@ -1,9 +1,9 @@
 package Tests;
 import Enumeraciones.Tecnologia;
 import Objetos.Cargador;
-import Objetos.EquipoSonido;
+import Dispositivos.EquipoSonido;
 import Objetos.Producto;
-import Objetos.Televisor;
+import Dispositivos.Televisor;
 import Sistemas.SistemaProductos;
 import org.junit.Before;
 import org.junit.Test;

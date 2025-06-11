@@ -1,6 +1,6 @@
 package Entidades;
 
-public class Persona {
+public abstract class Persona {
     private String nombre;
     private String apellido;
     private int edad;
@@ -11,6 +11,7 @@ public class Persona {
         this.apellido="x";
         this.edad=15;
     }
+
     public Persona(String nombre, String apellido, int edad){
         this.nombre=nombre;
         this.apellido=apellido;

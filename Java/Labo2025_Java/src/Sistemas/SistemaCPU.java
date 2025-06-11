@@ -4,7 +4,7 @@ import Entidades.Cliente;
 import Enumeraciones.Fabricante;
 import Enumeraciones.MetodoDePago;
 import Enumeraciones.TipoDeComponente;
-import Objetos.Componente;
+import Dispositivos.Componente;
 import Utilidad.Compra;
 
 import java.util.ArrayList;

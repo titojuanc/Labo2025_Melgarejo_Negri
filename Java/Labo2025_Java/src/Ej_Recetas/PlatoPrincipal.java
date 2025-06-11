@@ -1,5 +1,7 @@
 package Ej_Recetas;
 
+import Enumeraciones.Dificultad;
+
 import java.util.ArrayList;
 
 public class PlatoPrincipal extends Platillo{
@@ -17,6 +19,10 @@ public class PlatoPrincipal extends Platillo{
         mostrar_pasos();
     }
 
+    @Override
+    String tipo() {
+        return "PlatoPrincipal";
+    }
 
 
 }

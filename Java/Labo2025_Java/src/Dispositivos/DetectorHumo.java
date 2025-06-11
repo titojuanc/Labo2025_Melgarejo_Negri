@@ -1,6 +1,5 @@
-package Objetos;
+package Dispositivos;
 
-import java.net.ServerSocket;
 import java.time.LocalDate;
 
 public class DetectorHumo extends Sensor {

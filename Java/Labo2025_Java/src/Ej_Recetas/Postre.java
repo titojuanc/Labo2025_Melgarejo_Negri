@@ -1,5 +1,7 @@
 package Ej_Recetas;
 
+import Enumeraciones.Dificultad;
+
 import java.util.ArrayList;
 
 public class Postre extends Platillo{
@@ -17,5 +19,10 @@ public class Postre extends Platillo{
             System.out.println("RECORDAR: Mantener limpia la cocina y el horno al mínimo");
             System.out.println(paso);
         }
+    }
+
+    @Override
+    String tipo() {
+        return "Postre";
     }
 }

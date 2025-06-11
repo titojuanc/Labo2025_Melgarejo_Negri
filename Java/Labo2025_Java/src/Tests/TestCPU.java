@@ -5,7 +5,7 @@ import Entidades.Cliente;
 import Enumeraciones.Fabricante;
 import Enumeraciones.MetodoDePago;
 import Enumeraciones.TipoDeComponente;
-import Objetos.Componente;
+import Dispositivos.Componente;
 import Sistemas.SistemaCPU;
 import Utilidad.Compra;
 import org.junit.Before;

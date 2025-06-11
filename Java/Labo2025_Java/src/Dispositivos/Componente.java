@@ -1,4 +1,4 @@
-package Objetos;
+package Dispositivos;
 
 import Enumeraciones.Fabricante;
 import Enumeraciones.TipoDeComponente;

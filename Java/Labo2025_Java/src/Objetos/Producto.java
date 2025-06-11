@@ -1,6 +1,6 @@
 package Objetos;
 
-public class Producto {
+public abstract class Producto {
     private String nombre;
     private double precio;
     private int stock;

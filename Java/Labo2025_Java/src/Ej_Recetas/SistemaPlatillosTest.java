@@ -1,5 +1,7 @@
 package Ej_Recetas;
 
+import Enumeraciones.Dificultad;
+import Enumeraciones.TemperaturaServido;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -1,8 +1,10 @@
 package Ej_Drones;
 
+import Enumeraciones.Estado;
+
 import java.time.LocalDate;
 
-abstract class Dron {
+public abstract class Dron {
     private String modelo;
     private LocalDate fechaAdquisicion;
     private int nivelCarga;
@@ -57,7 +59,7 @@ abstract class Dron {
         }
     }
 
-    abstract boolean ejecutarMision(double latitud, double longitud);
+    public abstract boolean ejecutarMision(double latitud, double longitud);
 
     public double distanciaEnKm(double latitud, double longuitud){
         double lat1Rad = Math.toRadians(-34.573195);

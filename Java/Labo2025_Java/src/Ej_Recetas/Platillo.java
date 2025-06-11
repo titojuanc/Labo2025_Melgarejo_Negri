@@ -1,8 +1,10 @@
 package Ej_Recetas;
 
+import Enumeraciones.Dificultad;
+
 import java.util.ArrayList;
 
-abstract class Platillo {
+public abstract class Platillo {
     private String nombre;
     private Dificultad dificultad;
     private ArrayList<String> pasos;
@@ -44,4 +46,6 @@ abstract class Platillo {
             System.out.println(paso);
         }
     }
+
+    abstract String tipo();
 }

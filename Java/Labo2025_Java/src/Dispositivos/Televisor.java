@@ -1,8 +1,9 @@
-package Objetos;
+package Dispositivos;
 
 import Enumeraciones.Tecnologia;
+import Objetos.ProductoMultimedia;
 
-public class Televisor extends ProductoMultimedia{
+public class Televisor extends ProductoMultimedia {
     private Tecnologia tecnologia;
 
 

@@ -1,6 +1,8 @@
-package Objetos;
+package Dispositivos;
 
-public class EquipoSonido extends ProductoMultimedia{
+import Objetos.ProductoMultimedia;
+
+public class EquipoSonido extends ProductoMultimedia {
     private boolean bluetooth;
 
     public EquipoSonido(String nombre, double precio, int stock, boolean bluetooth) {

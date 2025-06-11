@@ -1,8 +1,7 @@
 package Sistemas;
 
-import Objetos.*;
+import Dispositivos.*;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;

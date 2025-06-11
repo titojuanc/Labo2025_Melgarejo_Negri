@@ -1,4 +1,4 @@
-package Ej_Recetas;
+package Enumeraciones;
 
 public enum Dificultad {
     FACIL,NORMAL,DIFICL;

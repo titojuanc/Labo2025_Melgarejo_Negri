@@ -1,5 +1,8 @@
 package Ej_Recetas;
 
+import Enumeraciones.Dificultad;
+import Enumeraciones.TemperaturaServido;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -42,7 +45,7 @@ public class SistemaPlatillos {
     public void platillosSegunTipo(String tipo){
         System.out.println("Platillos del tipo: "+tipo);
         for (Platillo p : this.platillos){
-            if (p.getClass().getSimpleName().equals(tipo)){
+            if (p.tipo().equals(tipo)){
                 System.out.println(p.getNombre());
             }
         }

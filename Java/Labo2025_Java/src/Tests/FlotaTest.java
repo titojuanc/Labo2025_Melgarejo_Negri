@@ -1,8 +1,8 @@
 package Tests;
 
 import Enumeraciones.Color;
-import Objetos.Camioneta;
-import Objetos.Coche;
+import Vehiculos.Camioneta;
+import Vehiculos.Coche;
 import Sistemas.FlotaSistema;
 import org.junit.Before;
 import org.junit.Test;

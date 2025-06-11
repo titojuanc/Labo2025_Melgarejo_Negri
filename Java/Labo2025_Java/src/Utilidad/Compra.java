@@ -1,7 +1,7 @@
 package Utilidad;
 
 import Entidades.Cliente;
-import Objetos.Componente;
+import Dispositivos.Componente;
 
 import java.util.ArrayList;
 
