@@ -69,9 +69,9 @@ public class SistemaMascotas {
     }
 
     public static void main(String[] args) {
-        Persona persona1=new Persona("La", "Timba");
-        Persona persona2=new Persona("Mati","Rui");
-        Persona persona3=new Persona("Juan Roman", "Riquelme");
+        Persona persona1=new Director("La", "Timba");
+        Persona persona2=new Director("Mati","Rui");
+        Persona persona3=new Director("Juan Roman", "Riquelme");
 
         Perro perro1=new Perro("Lanzini", persona1);
         Pez pez1=new Pez("MatiRuiJR", persona2);

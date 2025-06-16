@@ -1,5 +1,6 @@
 package RepasoEv1205;
 
+import Entidades.Director;
 import Entidades.Persona;
 
 import java.util.ArrayList;
@@ -108,10 +109,10 @@ public class SistemaVideoclubs {
     }
 
     public static void main(String[] args) {
-        Persona director1 = new Persona("Christopher Nolan", 50, "ahi");
-        Persona actor1 = new Persona("Leonardo DiCaprio", 40, "ahi");
-        Persona director2 = new Persona("Steven Spielberg", 30, "ahi");
-        Persona actor2 = new Persona("Tom Hanks", 35, "ahi");
+        Persona director1 = new Director("Christopher Nolan", 50, "ahi");
+        Persona actor1 = new Director("Leonardo DiCaprio", 40, "ahi");
+        Persona director2 = new Director("Steven Spielberg", 30, "ahi");
+        Persona actor2 = new Director("Tom Hanks", 35, "ahi");
 
         ArrayList<Persona> actores1 = new ArrayList<>();
         ArrayList<Persona> actores2 = new ArrayList<>();

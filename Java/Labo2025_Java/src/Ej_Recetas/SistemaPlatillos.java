@@ -42,10 +42,11 @@ public class SistemaPlatillos {
         }
     }
 
+    //intenté hacer un metodo abstracto y estático a la vez, pero no tenía sentido
     public void platillosSegunTipo(String tipo){
         System.out.println("Platillos del tipo: "+tipo);
         for (Platillo p : this.platillos){
-            if (p.tipo().equals(tipo)){
+            if (p.SoyEse(tipo)){
                 System.out.println(p.getNombre());
             }
         }

@@ -1,5 +1,6 @@
 package Melgarejo_Repaso;
 
+import Entidades.Director;
 import Entidades.Persona;
 
 import java.util.ArrayList;
@@ -26,11 +27,11 @@ public class Pelicula {
         this.genero = genero;
         this.duracion = duracion;
         this.directores = new ArrayList<>();
-        this.directores.add(new Persona("Gabriel", "Messina", 40));
-        this.directores.add(new Persona("Salvador", "Lopez", 39 ));
+        this.directores.add(new Director("Gabriel", "Messina", "X"));
+        this.directores.add(new Director("Salvador", "Lopez", "X" ));
         this.actores = new ArrayList<>();
-        this.actores.add(new Persona("Albano", "Fazzito",38 ));
-        this.actores.add(new Persona("Javier", "Albano", 68 ));
+        this.actores.add(new Director("Albano", "Fazzito","X" ));
+        this.actores.add(new Director("Javier", "Albano", "X" ));
         this.idiomas = new ArrayList<>();
         this.idiomas.add("Español");
     }
@@ -40,11 +41,11 @@ public class Pelicula {
         this.genero = "Accion";
         this.duracion = 90;
         this.directores = new ArrayList<>();
-        this.directores.add(new Persona("Gabriel", "Messina", 40));
-        this.directores.add(new Persona("Salvador", "Lopez", 39 ));
+        this.directores.add(new Director("Gabriel", "Messina", "X"));
+        this.directores.add(new Director("Salvador", "Lopez", "X" ));
         this.actores = new ArrayList<>();
-        this.actores.add(new Persona("Albano", "Fazzito",38 ));
-        this.actores.add(new Persona("Javier", "Albano", 68 ));
+        this.actores.add(new Director("Albano", "Fazzito","X" ));
+        this.actores.add(new Director("Javier", "Albano", "X" ));
         this.idiomas = new ArrayList<>();
         this.idiomas.add("Español");
 

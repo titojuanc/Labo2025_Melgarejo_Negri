@@ -13,16 +13,18 @@ public class PlatoPrincipal extends Platillo{
         this.tiempoCoccion=tiempoCoccion;
     }
 
+    public boolean SoyEse(String s){
+        if(s.equals("PlatoPrincipal")){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     @Override
     public void pasos_a_seguir() {
         System.out.println("Esta receta tarda en cocinarse "+tiempoCoccion+" minutos, " + " y los pasos son:");
         mostrar_pasos();
     }
-
-    @Override
-    String tipo() {
-        return "PlatoPrincipal";
-    }
-
-
 }

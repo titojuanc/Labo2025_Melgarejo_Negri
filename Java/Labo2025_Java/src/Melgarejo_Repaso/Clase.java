@@ -1,5 +1,6 @@
 package Melgarejo_Repaso;
 
+import Entidades.Director;
 import Entidades.Persona;
 
 public class Clase {
@@ -12,7 +13,7 @@ public class Clase {
         this.nombre=nombre;
         this.hora=hora;
         this.cuposMax=cuposMax;
-        this.entrenador=new Persona();
+        this.entrenador=new Director();
     }
 
     public String getNombre() {

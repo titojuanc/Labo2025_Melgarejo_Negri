@@ -1,5 +1,6 @@
 package Objetos;
 
+import Entidades.Director;
 import Entidades.Persona;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class CD {
 
     public CD(){
         ArrayList<Cancion> cancionesaux= new ArrayList<Cancion>();
-        Persona cerati = new Persona("Gustavo", 30, "X");
+        Persona cerati = new Director("Gustavo", 30, "X");
         cancionesaux.add(new Cancion("Bocanada", cerati));
         cancionesaux.add(new Cancion("Tabú", cerati));
         cancionesaux.add(new Cancion("Puente",cerati));
@@ -70,7 +71,7 @@ public class CD {
     }
 
     public static void main(String[] args) {
-        Persona artista1 = new Persona("Alberto", 40, "X");
+        Persona artista1 = new Director("Alberto", 40, "X");
         Cancion cancion1 = new Cancion("Bajan", artista1);
         Cancion cancion2 = new Cancion("Salir de la melanconía", artista1);
 

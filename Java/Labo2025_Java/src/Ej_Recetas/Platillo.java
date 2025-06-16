@@ -46,6 +46,5 @@ public abstract class Platillo {
             System.out.println(paso);
         }
     }
-
-    abstract String tipo();
+    abstract boolean SoyEse(String tipo);
 }

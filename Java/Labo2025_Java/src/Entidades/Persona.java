@@ -12,10 +12,16 @@ public abstract class Persona {
         this.edad=15;
     }
 
-    public Persona(String nombre, String apellido, int edad){
+    public Persona(String nombre, String apellido, int edad, String direccion){
         this.nombre=nombre;
         this.apellido=apellido;
         this.edad=edad;
+    }
+
+    public Persona(String nombre, String apellido, String direccion){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.direccion=direccion;
     }
 
     public Persona(String nombre, String apellido){
@@ -27,6 +33,12 @@ public abstract class Persona {
         this.nombre=nombre;
         this.edad=edad;
         this.direccion=direccion;
+    }
+
+    public Persona(String nombre, String apellido, int edad ){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.edad=edad;
     }
 
     public String getNombre() {
@@ -65,11 +77,6 @@ public abstract class Persona {
         System.out.println("Nombre: "+this.nombre);
         System.out.println("Apellido: "+this.apellido);
         System.out.println("Edad: "+this.edad);
-    }
-
-    public static void main(String[] args) {
-        Persona persona1 = new Persona();
-        persona1.imprimirDatos();
     }
 }
 

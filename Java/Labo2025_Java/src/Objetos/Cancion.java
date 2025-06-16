@@ -1,5 +1,6 @@
 package Objetos;
 
+import Entidades.Director;
 import Entidades.Persona;
 
 public class Cancion {
@@ -8,7 +9,7 @@ public class Cancion {
 
     public Cancion(){
         this.titulo="";
-        this.autor= new Persona();
+        this.autor= new Director();
     }
     public Cancion(String titulo, Persona persona){
         this.titulo=titulo;

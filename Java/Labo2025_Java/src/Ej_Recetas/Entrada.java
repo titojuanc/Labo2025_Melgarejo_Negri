@@ -12,6 +12,15 @@ public class Entrada extends Platillo{
         this.temperaturaServido=temperaturaServido;
     }
 
+    public boolean SoyEse(String s){
+        if(s.equals("Entrada")){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     @Override
     public void pasos_a_seguir() {
         if (temperaturaServido.equals(TemperaturaServido.FRIO)){
@@ -22,11 +31,6 @@ public class Entrada extends Platillo{
             System.out.println("RECORDAD: prenda el horno");
             mostrar_pasos();
         }
-    }
-
-    @Override
-    String tipo() {
-        return "Entrada";
     }
 }
 

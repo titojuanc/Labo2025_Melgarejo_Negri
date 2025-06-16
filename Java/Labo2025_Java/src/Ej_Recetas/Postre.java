@@ -13,6 +13,15 @@ public class Postre extends Platillo{
         this.apto_diabetico=apto_diabetico;
     }
 
+    public boolean SoyEse(String s){
+        if(s.equals("Postre")){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
     @Override
     public void pasos_a_seguir() {
         for (String paso : this.getPasos()){
@@ -21,8 +30,4 @@ public class Postre extends Platillo{
         }
     }
 
-    @Override
-    String tipo() {
-        return "Postre";
-    }
 }

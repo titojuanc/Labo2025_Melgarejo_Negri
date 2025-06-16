@@ -1,5 +1,6 @@
 package Objetos;
 
+import Entidades.Director;
 import Entidades.Persona;
 import Enumeraciones.Editorial;
 import Utilidad.Fecha;
@@ -14,7 +15,7 @@ public class Libro {
 
     public Libro(){
         this.titulo="";
-        this.autor=new Persona();
+        this.autor=new Director();
         this.isbn=0;
         this.paginas=0;
         this.editorial= Editorial.SUR;
@@ -23,7 +24,7 @@ public class Libro {
 
     public Libro(String titulo, Editorial editorial){
         this.titulo=titulo;
-        this.autor=new Persona();
+        this.autor=new Director();
         this.isbn=0;
         this.paginas=0;
         this.editorial=editorial;
@@ -32,7 +33,7 @@ public class Libro {
 
     public Libro(String titulo, String nombre, int edad, String direccion, int isbn, int paginas, Editorial editorial, int dia, int mes, int anio) {
         this.titulo = titulo;
-        this.autor = new Persona(nombre,edad,direccion);
+        this.autor = new Director(nombre,edad,direccion);
         this.isbn = isbn;
         this.paginas = paginas;
         this.editorial = editorial;
