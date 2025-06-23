@@ -24,6 +24,12 @@ public class Gato extends Mascota{
         System.out.println("MIAU!");
     }
 
+    private void restarAlegria(){
+        if(this.alegria>1){
+            this.alegria-=1;
+        }
+    }
+
     @Override
     public String queSoy() {
         return "Gato";
@@ -37,10 +43,11 @@ public class Gato extends Mascota{
         else{
             saludarDesconocido();
         }
+        restarAlegria();
     }
 
     @Override
     public void alimentar() {
-        super.alimentar();
+        this.alegria+=1;
     }
 }

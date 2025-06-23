@@ -17,6 +17,20 @@ public class Pajaro extends Mascota{
         }
     }
 
+    public int getAlegria() {
+        return alegria;
+    }
+
+    public void setAlegria(int alegria) {
+        this.alegria = alegria;
+    }
+
+    private void restarAlegria(){
+        if(this.alegria>1){
+            this.alegria-=1;
+        }
+    }
+
     @Override
     public String queSoy() {
         return "Pajaro";
@@ -27,10 +41,12 @@ public class Pajaro extends Mascota{
         if(esDuenio(persona)){
             System.out.println(this.saludo);
         }
+        restarAlegria();
     }
 
     @Override
     public void alimentar() {
+        this.alegria=alegria+1;
 
     }
 }
