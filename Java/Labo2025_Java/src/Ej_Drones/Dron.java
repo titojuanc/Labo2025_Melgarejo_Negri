@@ -52,7 +52,7 @@ public abstract class Dron {
         }
 
         if (nivelCarga>=20){
-            nivelCarga=+10;
+            nivelCarga=nivelCarga+10;
         }
         else {
             nivelCarga=100;
