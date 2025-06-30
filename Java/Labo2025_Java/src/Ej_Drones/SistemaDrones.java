@@ -126,7 +126,7 @@
             DronSeguridad vigilante1 = new DronSeguridad(
                     "DJI-Mavic-Vigilante",
                     LocalDate.of(2023, 5, 15),
-                    128 // GB de memoria SD
+                    128
             );
 
             DronSeguridad vigilante2 = new DronSeguridad(
@@ -144,7 +144,7 @@
             DronCarga transportador1 = new DronCarga(
                     "DJI-Matrice-600-Pro",
                     LocalDate.of(2021, 8, 22),
-                    5 // kg de carga máxima
+                    5
             );
 
             DronCarga transportador2 = new DronCarga(

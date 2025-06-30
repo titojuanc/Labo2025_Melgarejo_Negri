@@ -13,9 +13,9 @@ public class DronCarga extends Dron{
     @Override
     public boolean ejecutarMision(double latitud, double longuitud) {
         double kilometros= distanciaEnKm(latitud, longuitud);
-        if (this.getNivelCarga() >= 48){
+        if (this.getNivelCarga() >= 50){
             if (kilometros<=30){
-                this.setNivelCarga(getNivelCarga()-48);
+                this.setNivelCarga(getNivelCarga()-50);
                 return true;
             }
         }

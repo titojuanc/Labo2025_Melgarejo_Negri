@@ -8,7 +8,7 @@ public abstract class Dron {
     private String modelo;
     private LocalDate fechaAdquisicion;
     private int nivelCarga;
-    private static int cantidadOperativa;
+    private static int cantidadOperativa; //Se modifica cuando se agregan al array.
     private Estado estado;
 
     public Dron(String modelo, LocalDate fechaAdquisicion) {
