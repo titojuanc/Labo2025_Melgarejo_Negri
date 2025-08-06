@@ -24,4 +24,6 @@ public class Registro {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+
+
 }
