@@ -5,7 +5,7 @@ import Entidades.Persona;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Diseñador extends Persona {
+public class Diseniador extends Persona {
     private Tipo tipo;
     private HashMap<Proyecto, Double> registro;
 
@@ -13,7 +13,7 @@ public class Diseñador extends Persona {
         return  valor * tipo.getPorcentaje();
     }
 
-    public Diseñador(String nombre, String apellido, Tipo tipo) {
+    public Diseniador(String nombre, String apellido, Tipo tipo) {
         super(nombre, apellido);
         this.tipo = tipo;
         this.registro = new HashMap<>();
