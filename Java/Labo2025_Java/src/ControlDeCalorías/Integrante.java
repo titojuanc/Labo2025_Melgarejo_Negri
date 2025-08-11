@@ -14,9 +14,9 @@ public class Integrante extends Persona {
     }
     public void setCalorias(int calorias){
         this.calorias=calorias;
-    }
+    } // por si ya tiene calorías previas consumidas que quiere registrar
 
-    public void consumirCalorias(int calorias){
-        this.calorias=+calorias;
+    public void consumirCalorias(Plato plato){
+        this.calorias=+plato.getCalorias();
     }
 }

@@ -58,9 +58,13 @@ public class Familia {
 
         Collections.addAll(f1.getIntegrantes(), i1, i2, i3);
 
-        i1.consumirCalorias(1000);
-        i2.consumirCalorias(390);
-        i3.consumirCalorias(500);
+        Plato p1 = new Plato("Papa", new HashSet<String>(), 1000);
+        Plato p2 =new Plato("Asado", new HashSet<>(), 390);
+        Plato p3 = new Plato("Milanesa", new HashSet<>(), 500);
+
+        i1.consumirCalorias(p1);
+        i2.consumirCalorias(p2);
+        i3.consumirCalorias(p3);
 
         System.out.println("Promedio de la familia "+f1.getNombre()+": "+f1.promedioFamiliar());
 
