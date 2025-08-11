@@ -55,7 +55,7 @@ public class Paciente extends Persona {
             }
         }
         if (f1 && f2){
-            return ((alturaNueva-alturaVieja))/alturaVieja;
+            return ((alturaNueva-alturaVieja))/alturaVieja*100;
         }
         System.out.println("Error: fecha/s no válidas");
         return 0;
