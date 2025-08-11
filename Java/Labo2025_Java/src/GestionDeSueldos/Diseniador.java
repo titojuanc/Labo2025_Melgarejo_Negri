@@ -19,6 +19,14 @@ public class Diseniador extends Persona {
         this.registro = new HashMap<>();
     }
 
+
+
+
+
+
+
+
+
     public void agregarProyecto(Proyecto proyecto){
         registro.put(proyecto, proyecto.getValor());
         System.out.println("Proyecto "+proyecto.getNombre()+" agregado.");

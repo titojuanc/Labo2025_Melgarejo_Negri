@@ -7,35 +7,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Paciente extends Persona {
-    private HashMap<Registro, LocalDate> seguimiento;
+    private HashMap<LocalDate, Registro> seguimiento;
     public Paciente(String nombre, String apellido, int edad) {
         super(nombre, apellido, edad);
         seguimiento= new HashMap<>();
     }
 
     public void registrarPeso(double altura, double peso, LocalDate fecha){
-        seguimiento.put(new Registro(altura, peso), fecha);
+        seguimiento.put(fecha, new Registro(altura, peso));
     }
 
     public void fechaParticular(LocalDate fecha){
-        for (Map.Entry<Registro, LocalDate> l : seguimiento.entrySet()){
-            if (l.getValue().equals(fecha)){
-                System.out.println("Altura: "+l.getKey().getAltura());
-                System.out.println("Peso: "+l.getKey().getPeso());
+            if (this.seguimiento.containsKey(fecha)){
+                System.out.println("Altura: "+this.seguimiento.get(fecha).getAltura());
+                System.out.println("Peso: "+this.seguimiento.get(fecha).getPeso());
                 return;
             }
+            System.out.println("No hay registro de esa fecha :(");
         }
-        System.out.println("No hay registro de esa fecha :(");
-    }
-
     public void promedioAnual(int anio){
         double promAltura = 0;
         double promPeso = 0;
         int cont=0;
-        for (Map.Entry<Registro, LocalDate> l : seguimiento.entrySet()){
-            if (l.getValue().getYear()==anio){
-                promAltura+=l.getKey().getAltura();
-                promPeso+=l.getKey().getPeso();
+        for (LocalDate fecha : this.seguimiento.keySet()){
+            if (fecha.getYear() == anio){
+                promAltura+=this.seguimiento.get(fecha).getAltura();
+                promPeso+=this.seguimiento.get(fecha).getPeso();
                 cont++;
             }
         }
@@ -46,14 +43,22 @@ public class Paciente extends Persona {
     public double porcentajeCrecimiento(LocalDate fecha1, LocalDate fecha2){
         double alturaVieja=0;
         double alturaNueva=0;
-        for (Map.Entry<Registro, LocalDate> l : seguimiento.entrySet()){
-            if (l.getValue().equals(fecha1)){
-                alturaVieja=l.getKey().getAltura();
-            } else if (l.getValue().equals(fecha2)) {
-                alturaNueva=l.getKey().getAltura();
+        boolean f1=false;
+        boolean f2=false;
+        for (LocalDate fecha: seguimiento.keySet()){
+            if (fecha1.equals(fecha)){
+                alturaVieja=seguimiento.get(fecha).getAltura();
+                f1=true;
+            } else if (fecha.equals(fecha2)) {
+                alturaNueva=seguimiento.get(fecha).getAltura();
+                f2=true;
             }
         }
-        return ((alturaNueva-alturaVieja))/alturaVieja;
+        if (f1 && f2){
+            return ((alturaNueva-alturaVieja))/alturaVieja;
+        }
+        System.out.println("Error: fecha/s no válidas");
+        return 0;
     }
 
     public static void main(String[] args) {
