@@ -28,12 +28,12 @@ public class Paciente extends Persona {
         System.out.println("No hay registro de esa fecha :(");
     }
 
-    public void promedioAnual(){
+    public void promedioAnual(int anio){
         double promAltura = 0;
         double promPeso = 0;
         int cont=0;
         for (Map.Entry<Registro, LocalDate> l : seguimiento.entrySet()){
-            if (l.getValue().getYear()==LocalDate.now().getYear()){
+            if (l.getValue().getYear()==anio){
                 promAltura+=l.getKey().getAltura();
                 promPeso+=l.getKey().getPeso();
                 cont++;
@@ -64,15 +64,15 @@ public class Paciente extends Persona {
         p1.registrarPeso(1.80, 65.9, LocalDate.of(2025, 7, 7));
         p1.registrarPeso(1.82, 67.9, LocalDate.of(2025, 8, 7));
 
-        p2.registrarPeso(1.70, 55.8, LocalDate.of(2025, 3, 15));
+        p2.registrarPeso(1.00, 55.8, LocalDate.of(2025, 3, 15));
         p2.registrarPeso(1.80, 60.1, LocalDate.of(2025, 5, 15));
 
         p3.registrarPeso(1.60, 50.0, LocalDate.of(2025, 6, 21));
         p3.registrarPeso(1.60, 49.8, LocalDate.of(2025, 10, 9));
 
         p1.fechaParticular(LocalDate.of(2025, 7, 7));
-        p2.promedioAnual();
-        System.out.println(p2.porcentajeCrecimiento(LocalDate.of(2025, 3, 15), LocalDate.of(2025, 5, 15)));
+        p2.promedioAnual(2025);
+        System.out.println("EL paciente creció un "+p2.porcentajeCrecimiento(LocalDate.of(2025, 3, 15), LocalDate.of(2025, 5, 15))+"% ");
     }
 
 }
