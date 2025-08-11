@@ -50,41 +50,36 @@ public class Continente extends Lugar{
     }
 
     public int poblacionCodigo(int codigo){
-        int cant = 0;
         for (Pais pais : this.paises){
             if(pais.getCodigo() == codigo){
                 return pais.getPoblacion();
             }
             else{
-                cant = pais.poblacionCodigo(codigo);
+                int cant = pais.poblacionCodigo(codigo);
+                if(cant != 0){
+                    return cant;
+                }
             }
         }
-        return cant;
+        return 0;
     }
 
     public Pais menorCantPais(Pais p){
-        boolean check = true;
         for (Pais pa : this.paises){
-            if(check){
-                p=pa;
-            }
-            if(pa.getPoblacion() < p.getPoblacion()){
-                p=pa;
+            if(p == null || pa.getPoblacion() < p.getPoblacion()){
+                p = pa;
             }
         }
         return p;
     }
 
     public Pais mayorCantPais(Pais p){
-        boolean check = true;
         for (Pais pa : this.paises){
-            if(check){
-                p=pa;
-            }
-            if(pa.getPoblacion() > p.getPoblacion()){
-                p=pa;
+            if(p == null || pa.getPoblacion() > p.getPoblacion()){
+                p = pa;
             }
         }
         return p;
     }
+
 }

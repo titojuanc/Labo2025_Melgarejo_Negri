@@ -47,15 +47,17 @@ public class Provincia extends Lugar{
     }
 
     public int poblacionCodigo(int codigo){
-        int cant = 0;
         for (Ciudad ciud : this.ciudades){
             if(ciud.getCodigo() == codigo){
                 return ciud.getPoblacion();
             }
             else{
-                cant = ciud.poblacionCodigo(codigo);
+                int cant = ciud.poblacionCodigo(codigo);
+                if(cant != 0){
+                    return cant;
+                }
             }
         }
-        return cant;
+        return 0;
     }
 }

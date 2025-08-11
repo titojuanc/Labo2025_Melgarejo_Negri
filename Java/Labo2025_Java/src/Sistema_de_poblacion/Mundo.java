@@ -31,16 +31,18 @@ public class Mundo {
     }
 
     public int poblacionCodigo(int codigo){
-        int cant = 0;
         for (Continente con : this.continentes){
             if(con.getCodigo() == codigo){
                 return con.getPoblacion();
             }
             else{
-                cant = con.poblacionCodigo(codigo);
+                int cant = con.poblacionCodigo(codigo);
+                if(cant != 0){
+                    return cant;
+                }
             }
         }
-        return cant;
+        return 0;
     }
 
     public Continente menorCantContinente(){
@@ -74,20 +76,27 @@ public class Mundo {
     }
 
     public Pais menorCantPais(){
-        Pais p = new Pais();
+        Pais menor = null;
         for(Continente con : this.continentes){
-            p=con.menorCantPais(p);
+            Pais candidato = con.menorCantPais(null);
+            if(menor == null || candidato.getPoblacion() < menor.getPoblacion()){
+                menor = candidato;
+            }
         }
-        return p;
+        return menor;
     }
 
     public Pais mayorCantPais(){
-        Pais p = new Pais();
+        Pais mayor = null;
         for(Continente con : this.continentes){
-            p=con.menorCantPais(p);
+            Pais candidato = con.mayorCantPais(null);
+            if(mayor == null || candidato.getPoblacion() > mayor.getPoblacion()){
+                mayor = candidato;
+            }
         }
-        return p;
+        return mayor;
     }
+
 
     public static void main(String[] args) {
         Barrio b1 = new Barrio(1000, 1);

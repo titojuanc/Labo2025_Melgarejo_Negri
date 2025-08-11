@@ -50,15 +50,17 @@ public class Pais extends Lugar{
     }
 
     public int poblacionCodigo(int codigo){
-        int cant = 0;
         for (Provincia prov : this.provincias){
             if(prov.getCodigo() == codigo){
                 return prov.getPoblacion();
             }
             else{
-                cant = prov.poblacionCodigo(codigo);
+                int cant = prov.poblacionCodigo(codigo);
+                if(cant != 0){
+                    return cant;
+                }
             }
         }
-        return cant;
+        return 0;
     }
 }
