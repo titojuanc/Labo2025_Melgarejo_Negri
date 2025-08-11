@@ -13,6 +13,12 @@ public abstract class Lugar {
         this.coordenadas = new HashSet<Coordenada>();
     }
 
+    public Lugar(int codigo){
+        this.nombre = "";
+        this.codigo = codigo;
+        this.coordenadas = new HashSet<Coordenada>();
+    }
+
     public Lugar(String nombre, int codigo, HashSet<Coordenada> coordenadas) {
         this.nombre = nombre;
         this.codigo = codigo;

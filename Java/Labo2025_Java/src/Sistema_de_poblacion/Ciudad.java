@@ -5,6 +5,11 @@ import java.util.HashSet;
 public class Ciudad extends Lugar{
     private HashSet<Barrio> barrios;
 
+    public Ciudad(int codigo, HashSet<Barrio> barrios){
+        super(codigo);
+        this.barrios = barrios;
+    }
+
     public Ciudad(String nombre, int codigo, HashSet<Coordenada> coordenadas, HashSet<Barrio> barrios) {
         super(nombre, codigo, coordenadas);
         this.barrios = barrios;

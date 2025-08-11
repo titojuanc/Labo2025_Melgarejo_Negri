@@ -5,6 +5,12 @@ import java.util.HashSet;
 public class Provincia extends Lugar{
     private HashSet<Ciudad> ciudades;
 
+    public Provincia(int codigo, HashSet<Ciudad> ciudades){
+        super(codigo);
+        this.ciudades = ciudades;
+    }
+
+
     public Provincia(String nombre, int codigo, HashSet<Coordenada> coordenadas, HashSet<Ciudad> ciudades) {
         super(nombre, codigo, coordenadas);
         this.ciudades = ciudades;

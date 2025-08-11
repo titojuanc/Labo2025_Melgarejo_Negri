@@ -5,11 +5,19 @@ import java.util.HashSet;
 public class Continente extends Lugar{
     private HashSet<Pais> paises;
 
+    public Continente(){
+        super();
+    }
+
+    public Continente(int codigo, HashSet<Pais> paises){
+        super(codigo);
+        this.paises = paises;
+    }
+
     public Continente(String nombre, int codigo, HashSet<Coordenada> coordenadas, HashSet<Pais> paises) {
         super(nombre, codigo, coordenadas);
         this.paises = paises;
     }
-
 
     public HashSet<Pais> getPaises() {
         return paises;
@@ -52,5 +60,31 @@ public class Continente extends Lugar{
             }
         }
         return cant;
+    }
+
+    public Pais menorCantPais(Pais p){
+        boolean check = true;
+        for (Pais pa : this.paises){
+            if(check){
+                p=pa;
+            }
+            if(pa.getPoblacion() < p.getPoblacion()){
+                p=pa;
+            }
+        }
+        return p;
+    }
+
+    public Pais mayorCantPais(Pais p){
+        boolean check = true;
+        for (Pais pa : this.paises){
+            if(check){
+                p=pa;
+            }
+            if(pa.getPoblacion() > p.getPoblacion()){
+                p=pa;
+            }
+        }
+        return p;
     }
 }
