@@ -5,6 +5,8 @@ import Enumeraciones.Fabricante;
 import Enumeraciones.MetodoDePago;
 import Enumeraciones.TipoDeComponente;
 import Dispositivos.Componente;
+import TesteosDeExcepciones.NotInListException;
+import TesteosDeExcepciones.OutOfStockException;
 import Utilidad.Compra;
 
 import java.util.ArrayList;
@@ -54,18 +56,15 @@ public class SistemaCPU {
         }
     }
 
-    public void agregarAlCarrito(Componente componente){
-        if(this.listado.contains(componente)){
-            if (componente.getStock()>0){
-                this.carrito.add(componente);
-                System.out.println("Componente "+componente.getModelo()+" agregado al carrito.");
-            }
-            else {
-                System.out.println("Lo sentimos, no tenemos stock disponible.");
-            }
+    public void agregarAlCarrito(Componente componente) throws OutOfStockException, NotInListException {
+        if (componente.getStock()==0){
+            throw new OutOfStockException();
+        } else if (!listado.contains(componente)) {
+            throw new NotInListException();
         }
-        else {
-            System.out.println("Error, ese producto no está en nuestro listado");
+        else{
+            this.carrito.add(componente);
+            System.out.println("Componente "+componente.getModelo()+" agregado al carrito.");
         }
     }
 
@@ -102,7 +101,7 @@ public class SistemaCPU {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws OutOfStockException {
         SistemaCPU sistema = new SistemaCPU();
         ArrayList<Componente> componentes = new ArrayList<>();
         Componente c1 = new Componente(Fabricante.HP, "Pavilion 500", 299.99, 10, TipoDeComponente.IMPRESORA);
@@ -120,23 +119,41 @@ public class SistemaCPU {
 
         Cliente cliente1 = new Cliente("Salvador", "Lopez Calo", 16, MetodoDePago.TARJETA, 1534420897);
         Cliente cliente2 = new Cliente("Gabriel", "Messina", 17, MetodoDePago.TRANSFERENCIA, 153428240);
-        sistema.agregarAlCarrito(c10);
-        sistema.agregarAlCarrito(c1);
-        sistema.agregarAlCarrito(c4);
-        sistema.agregarAlCarrito(c7);
+
+        try {
+            sistema.agregarAlCarrito(c10);
+            sistema.agregarAlCarrito(c1);
+            sistema.agregarAlCarrito(c4);
+            sistema.agregarAlCarrito(c7);
+        }
+        catch (OutOfStockException | NotInListException e){
+            System.out.println(e.getMessage());
+        }
+
 
         sistema.mostrarCarrito();
 
         sistema.comprar(cliente1);
 
-        sistema.agregarAlCarrito(c9);
-        sistema.agregarAlCarrito(c3);
-        sistema.agregarAlCarrito(c2);
-        sistema.agregarAlCarrito(c1);
+
+        try{
+            sistema.agregarAlCarrito(c9);
+            sistema.agregarAlCarrito(c3);
+            sistema.agregarAlCarrito(c2);
+            sistema.agregarAlCarrito(c1);
+        }
+        catch (OutOfStockException | NotInListException e){
+            System.out.println(e.getMessage());
+        }
 
         sistema.comprar(cliente2);
 
-        sistema.agregarAlCarrito(c10);
+        try{
+            sistema.agregarAlCarrito(c10);
+        }
+        catch (OutOfStockException | NotInListException e){
+            System.out.println(e.getMessage());
+        }
 
         sistema.comprar(cliente2);
 

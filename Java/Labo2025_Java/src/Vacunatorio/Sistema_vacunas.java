@@ -67,10 +67,10 @@ public class Sistema_vacunas {
 
     public static void main(String[] args) {
         Sistema_vacunas sistema = new Sistema_vacunas();
-        Ciudadano c1 = new Ciudadano("Juan", "Carlos", "Carlos A. López 4248", "12345678", "ipv4@gmail.com", Provincia.CHACO);
-        Ciudadano c2 = new Ciudadano("Martin", "Carlos", "Carlos A. López 4248", "12345678", "ipv4@gmail.com", Provincia.BUENOS_AIRES);
-        Ciudadano c3 = new Ciudadano("Juliana", "Carlos", "Carlos A. López 4248", "12345678", "ipv4@gmail.com", Provincia.TIERRA_DEL_FUEGO);
-        Ciudadano c4 = new Ciudadano("Mateo", "Carlos", "Carlos A. López 4248", "12345678", "ipv4@gmail.com", Provincia.CHACO);
+        Ciudadano c1 = new Ciudadano("Juan", "Carlos", "Carlos A. López 4248", 12345678, "ipv4@gmail.com", Provincia.CHACO);
+        Ciudadano c2 = new Ciudadano("Martin", "Carlos", "Carlos A. López 4248", 12345678, "ipv4@gmail.com", Provincia.BUENOS_AIRES);
+        Ciudadano c3 = new Ciudadano("Juliana", "Carlos", "Carlos A. López 4248", 12345678, "ipv4@gmail.com", Provincia.TIERRA_DEL_FUEGO);
+        Ciudadano c4 = new Ciudadano("Mateo", "Carlos", "Carlos A. López 4248", 12345678, "ipv4@gmail.com", Provincia.CHACO);
 
         Vacuna v1 = new Vacuna("Edmontonitis", LocalDate.now(), LocalDate.now(), 1, 1);
         Vacuna v2 = new Vacuna("Jorgitus", LocalDate.now(), LocalDate.now(), 1, 1);
