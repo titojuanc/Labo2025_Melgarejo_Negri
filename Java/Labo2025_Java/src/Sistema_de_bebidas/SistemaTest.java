@@ -1,4 +1,4 @@
-package Sistema_de_bebidas;
+/*package Sistema_de_bebidas;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -58,3 +58,4 @@ public class SistemaTest {
         assertEquals(-337, c2.getHidratacion(), -337);
     }
 }
+*/

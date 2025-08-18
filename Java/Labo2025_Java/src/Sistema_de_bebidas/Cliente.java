@@ -42,4 +42,8 @@ public class Cliente extends Persona {
             this.bebidas.add(b);
         }
     }
+
+    public int getDNI(){
+        return this.getEdad();
+    }
 }
