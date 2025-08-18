@@ -23,15 +23,15 @@ public class Familia {
     public double promedioFamiliar(){
         int calTotal=0;
         for (Integrante i : integrantes){
-            calTotal+=i.getCalorias();
+            calTotal+=i.consumoTotal();
         }
         return calTotal/integrantes.size();
     }
 
     public Integrante integranteMasGlorbo(){
-        Integrante intMax= new Integrante("x", "x", 0);
+        Integrante intMax= null;
         for (Integrante i : integrantes){
-            if (i.getCalorias()>=intMax.getCalorias()){
+            if (intMax == null || i.consumoTotal()>=intMax.consumoTotal()){
                 intMax=i;
             }
         }
@@ -39,10 +39,9 @@ public class Familia {
     }
 
     public Integrante integranteMenosGlorbo(){
-        Integrante intMax= new Integrante("x", "x", 0);
-        intMax.setCalorias(999999999);
+        Integrante intMax = null;
         for (Integrante i : integrantes){
-            if (i.getCalorias()<=intMax.getCalorias()){
+            if (intMax == null || i.consumoTotal()<=intMax.consumoTotal()){
                 intMax=i;
             }
         }
@@ -58,13 +57,10 @@ public class Familia {
 
         Collections.addAll(f1.getIntegrantes(), i1, i2, i3);
 
-        Plato p1 = new Plato("Papa", new HashSet<String>(), 1000);
-        Plato p2 =new Plato("Asado", new HashSet<>(), 390);
-        Plato p3 = new Plato("Milanesa", new HashSet<>(), 500);
+        Plato p1 = new Plato("Papa", new HashSet<Ingrediente>());
+        Plato p2 =new Plato("Asado", new HashSet<>());
+        Plato p3 = new Plato("Milanesa", new HashSet<>());
 
-        i1.consumirCalorias(p1);
-        i2.consumirCalorias(p2);
-        i3.consumirCalorias(p3);
 
         System.out.println("Promedio de la familia "+f1.getNombre()+": "+f1.promedioFamiliar());
 

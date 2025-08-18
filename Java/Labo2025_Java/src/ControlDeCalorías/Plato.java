@@ -4,16 +4,22 @@ import java.util.HashSet;
 
 public class Plato {
     private String nombre;
-    private HashSet<String> ingredientes;
-    private int calorias;
+    private HashSet<Ingrediente> ingredientes;
 
-    public Plato(String nombre, HashSet<String> ingredientes, int calorias){
+    public Plato(String nombre, HashSet<Ingrediente> ingredientes){
         this.nombre=nombre;
         this.ingredientes=ingredientes;
-        this.calorias=calorias;
     }
 
     public int getCalorias() {
-        return calorias;
+        int suma = 0;
+        for (Ingrediente i : this.ingredientes){
+            suma += i.getCalorias();
+        }
+        return suma;
+    }
+
+    public HashSet<Ingrediente> getIngredientes(){
+        return this.ingredientes;
     }
 }
