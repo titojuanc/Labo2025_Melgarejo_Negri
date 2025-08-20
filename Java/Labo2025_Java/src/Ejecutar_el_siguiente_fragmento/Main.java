@@ -10,9 +10,7 @@ public class Main {
         if(nombre == null){
             throw new NombreNullException("Poner un nombre válido (Personalizado)");
         }
-        else{
-            return largoNombre(nombre);
-        }
+        return largoNombre(nombre);
     }
 
     public static void main(String[] args) {
