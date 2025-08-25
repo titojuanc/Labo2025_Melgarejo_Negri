@@ -5,7 +5,7 @@ public class Libro {
     private String nombrePdf;
     private Genero genero;
     private Autor autor;
-    private int limitePrestamo = 145;
+    private int limitePrestamo = 4; //el valor está así para poder probar la excepción.
     private int vecesPrestado=0;
 
     public Libro(String titulo, String nombrePdf, Genero genero, Autor autor) {
@@ -13,6 +13,7 @@ public class Libro {
         this.nombrePdf = nombrePdf;
         this.genero = genero;
         this.autor = autor;
+        autor.getBibliografia().add(this);
     }
 
     public String getTitulo() {
@@ -33,6 +34,14 @@ public class Libro {
 
     public Genero getGenero() {
         return genero;
+    }
+
+    public void prestar(){
+        this.vecesPrestado++;
+    }
+
+    public void devolver(){
+        this.vecesPrestado--;
     }
 
     public void setGenero(Genero genero) {

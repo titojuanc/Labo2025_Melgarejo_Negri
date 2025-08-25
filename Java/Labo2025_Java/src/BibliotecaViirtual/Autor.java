@@ -13,6 +13,10 @@ public class Autor extends Persona {
         this.bibliografia= new HashSet<>();
     }
 
+    public HashSet<Libro> getBibliografia(){
+        return this.bibliografia;
+    }
+
 
 
 

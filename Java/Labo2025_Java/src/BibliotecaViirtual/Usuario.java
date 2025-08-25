@@ -26,6 +26,10 @@ public class Usuario extends Persona {
         return librosPrestados;
     }
 
+    public Integer cantidadlibrosprestados(){
+        return librosPrestados.size();
+    }
+
     public void setLibrosPrestados(HashSet<Libro> librosPrestados) {
         this.librosPrestados = librosPrestados;
     }
