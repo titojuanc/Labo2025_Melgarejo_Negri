@@ -6,6 +6,7 @@ public class Libro {
     private Genero genero;
     private Autor autor;
     private int limitePrestamo = 4; //el valor está así para poder probar la excepción.
+
     private int vecesPrestado=0;
 
     public Libro(String titulo, String nombrePdf, Genero genero, Autor autor) {
