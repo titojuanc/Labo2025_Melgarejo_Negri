@@ -36,6 +36,12 @@ public abstract class Persona {
         this.edad=edad;
     }
 
+    public Persona( int dni, String apellido, String nombre){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.dni=dni;
+    }
+
     public Persona(String nombre, String apellido, String direccion){
         this.nombre=nombre;
         this.apellido=apellido;

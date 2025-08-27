@@ -7,6 +7,7 @@ import Enumeraciones.MetodoDePago;
 import Enumeraciones.TipoDeComponente;
 import Dispositivos.Componente;
 import Sistemas.SistemaCPU;
+import TesteosDeExcepciones.OutOfStockException;
 import Utilidad.Compra;
 import org.junit.Before;
 import org.junit.Test;
@@ -42,7 +43,7 @@ public class TestCPU {
     }
 
     @Test
-    public void comprar(){
+    public void comprar() throws OutOfStockException {
         Cliente cliente1 = new Cliente("Salvador", "Lopez Calo", 16, MetodoDePago.TARJETA, 1534420897);
         sistema.agregarAlCarrito(c10);
         assertEquals(1, sistema.getCarrito().size());
