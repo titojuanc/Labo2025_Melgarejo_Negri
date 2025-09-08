@@ -19,7 +19,7 @@ public abstract class Paciente extends Persona {
     }
 
     public int calcularEdad(){
-        Period edad = Period.between(LocalDate.now(), this.getFecha_nacimiento());
+        Period edad = Period.between(this.getFecha_nacimiento(), LocalDate.now());
         return edad.getYears();
     }
 }

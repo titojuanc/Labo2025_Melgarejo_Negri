@@ -32,7 +32,7 @@ public class Ninio extends Paciente implements Modificable{
             System.out.println("Tu tratamiento tardará esta cantidad de días: " + (nivelTolerancia * 2));
             return true;
         } else {
-            System.out.println();
+            System.out.println("Es muy jóven para el tratamiento");
             return false;
         }
     }
