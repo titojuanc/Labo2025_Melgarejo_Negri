@@ -23,6 +23,12 @@ public abstract class Persona {
         this.dni=dni;
     }
 
+    public Persona(String nombre, String apellido, LocalDate fecha_nacimiento){
+        this.nombre=nombre;
+        this.fecha_nacimiento=fecha_nacimiento;
+        this.apellido=apellido;
+    }
+
     public Persona(String nombre, String apellido, LocalDate fecha_nacimiento, String direccion){
         this.nombre=nombre;
         this.apellido=apellido;
