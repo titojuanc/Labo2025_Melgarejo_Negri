@@ -33,11 +33,9 @@ public class Main {
         p2.agregarMensajero(tr2);
 
         System.out.println("Campaña de LLA: ");
-        p1.hacerCampania();
+        p1.hacerCampania("Vote por el partido para un mejor futuro");
 
         System.out.println("Campaña de FDI: ");
-        p2.hacerCampania();
-
-
+        p2.hacerCampania("Vote por el partido para un mejor futuro");
     }
 }

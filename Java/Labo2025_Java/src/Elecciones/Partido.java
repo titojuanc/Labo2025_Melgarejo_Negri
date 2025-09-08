@@ -19,9 +19,9 @@ public class Partido {
         this.mensajeros.add(m);
     }
 
-    public void hacerCampania(){
+    public void hacerCampania(String mensaje){
         for (Mensajero m : this.mensajeros){
-            m.enviarMensaje();
+            m.enviarMensaje(mensaje);
         }
     }
 

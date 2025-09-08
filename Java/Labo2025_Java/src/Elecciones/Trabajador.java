@@ -24,7 +24,7 @@ public class Trabajador extends Persona implements Mensajero {
 
 
     @Override
-    public void enviarMensaje() {
+    public void enviarMensaje(String mensaje) {
         if (LocalTime.now().getHour()<horarioSalida && LocalTime.now().getHour()>horarioEntrada ){
             System.out.println("Yo, " + this.getNombre() + " te invito a " + mensaje);
         }

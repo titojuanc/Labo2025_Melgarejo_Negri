@@ -42,7 +42,7 @@ public class Telefono extends Dispositivo{
 
 
     @Override
-    public void enviarMensaje() {
+    public void enviarMensaje(String mensaje) {
         System.out.println("Conectando con la antena más cercana...");
         if (credito>0 && encendido){
             System.out.println(mensaje);

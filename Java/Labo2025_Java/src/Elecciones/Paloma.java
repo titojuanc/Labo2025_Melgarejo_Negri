@@ -17,7 +17,7 @@ public class Paloma extends Ave{
     }
 
     @Override
-    public void enviarMensaje() {
+    public void enviarMensaje(String mensaje) {
         if (mapa){
             System.out.println("Lanzando un papelito que dice: " + mensaje);
         }
