@@ -58,7 +58,7 @@ public class Bar {
     }
 
     public int cantidadBeneficios(){
-        return this.beneficios.size();
+        return this.beneficios.size()-this.beneficios_acumulables.size();
     }
 
     public Diana dianaMayorCantPuntajesDeUnBar(){
