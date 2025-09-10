@@ -2,8 +2,8 @@ package CampeonatoArcoYFlecha;
 
 import Entidades.Persona;
 
-public class Creador extends Persona {
-    public Creador(String nombre, String apellido, int edad) {
+public class Cliente extends Persona {
+    public Cliente(String nombre, String apellido, int edad) {
         super(nombre, apellido, edad);
     }
 }
