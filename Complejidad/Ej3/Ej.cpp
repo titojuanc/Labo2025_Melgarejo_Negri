@@ -32,3 +32,19 @@ la longitud de la meseta mas larga. Ejemplo del vector = [1,1,1,2,2,3,3,3,3], rt
 [1,2,3,4,5,6,7,8,9]
 */
 /*b) El peor caso es O(n)*/
+/*c) Si
+int mesetaMasLarga(vector v){
+    int maxMeseta = 0;
+    int meseta = 0;
+    for (int i = 0; i<v.size(); i++){
+        while ( i < v.size() && v[i] == v[i+1]){
+            meseta++;
+            i++;
+        }
+        if(meseta > maxMeseta){
+            maxMeseta = meseta;
+            meseta=0;
+        }
+    }
+}
+*/
