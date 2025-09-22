@@ -18,4 +18,4 @@ int contarApariciones (vector &v , int elem ) {
     }
 }
 
-/*RTA: O(1)*/
+/*RTA: O(n)*/

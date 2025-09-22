@@ -36,15 +36,21 @@ la longitud de la meseta mas larga. Ejemplo del vector = [1,1,1,2,2,3,3,3,3], rt
 int mesetaMasLarga(vector v){
     int maxMeseta = 0;
     int meseta = 0;
-    for (int i = 0; i<v.size(); i++){
-        while ( i < v.size() && v[i] == v[i+1]){
-            meseta++;
-            i++;
+    int j=0;
+    int i=0;
+    while (i<v.size()){
+        if(v[i] == v[j]){
+            j++
+            
+        } else {
+            meseta = j-i;
+            if(meseta > maxMeseta){
+                maxMeseta = meseta;
+                meseta=0;
+            }
+            i=j;
         }
-        if(meseta > maxMeseta){
-            maxMeseta = meseta;
-            meseta=0;
-        }
+        
     }
 }
 */
