@@ -1,7 +1,7 @@
 package TratamientoDeSangre;
 
 public interface Modificable {
-    boolean tratar();
 
+    boolean tratar();
     int precioTratamiento();
 }

@@ -10,9 +10,9 @@ public class Ninio extends Paciente implements Modificable{
     public Ninio(String nombre, String apellido, LocalDate fecha, Genero genero, TipoSangre tipoSangre, boolean factorRH, int nivelTolerancia) {
         super(nombre, apellido, fecha, genero, tipoSangre, factorRH);
         if (nivelTolerancia>=10){
-            nivelTolerancia=10;
+            this.nivelTolerancia=10;
         } else if (nivelTolerancia<=1) {
-            nivelTolerancia=1;
+            this.nivelTolerancia=1;
         } else {
             this.nivelTolerancia=nivelTolerancia;
         }
