@@ -13,16 +13,20 @@ public class Principiante extends Participante implements PlatoEntradaInterface 
         this.ingredientes_prohibidos = ingredientes_prohibidos;
     }
 
+    public HashSet<Ingrediente> getIngredientes_prohibidos() {
+        return ingredientes_prohibidos;
+    }
+
     @Override
     public void prepararLugarDeTrabajo() {
-        System.out.println("Ya guardé todos los elementos prohibidos");
+        System.out.println("Ya guardé todos los elementos prohibidos y no voy a usar");
         for(Ingrediente i : this.ingredientes_prohibidos){
             System.out.println("-" + i.getNombre());
         }
     }
 
     @Override
-    public Plato cocinarEntrada(Plato pla) throws PlatoConIngredienteProhibidoException{
+    public Plato cocinarEntrada(PlatoEntrada pla) throws PlatoConIngredienteProhibidoException {
         for (Ingrediente i : pla.getIngredientes_necesarios().keySet()){
             if(this.ingredientes_prohibidos.contains(i)){
                 throw new PlatoConIngredienteProhibidoException("Tenés ingredientes prohibidos");
@@ -32,7 +36,7 @@ public class Principiante extends Participante implements PlatoEntradaInterface 
     }
 
     @Override
-    public Plato servirEntrada(Plato pla) {
-        return null;
+    public Plato servirEntrada(PlatoEntrada pla) {
+        return pla;
     }
 }

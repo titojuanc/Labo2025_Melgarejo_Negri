@@ -1,6 +1,6 @@
 package LaboChef;
 
-public class PlatoPrincipalInterface {
+public interface PlatoPrincipalInterface {
     Plato cocinarPrincipal(PlatoPrincipal pla) throws IngredientesInsuficientesException;
-    Plato servirPrincipal(PlatoPrincipal pla) throws IngredientesInsuficientesException;
+    Plato servirPrincipal(PlatoPrincipal pla);
 }
