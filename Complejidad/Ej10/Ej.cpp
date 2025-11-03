@@ -8,25 +8,14 @@ void ordenar(vector &v){
     int i=0, uno=0, dos=0, tres=0;
     while (i<v.size()){
         if(v[i] == 1){
-            uno++;
-        }
-        else if(v[i] == 2){
-            dos++;
-        }
-        else{
-            tres++;
-        }
-        i++;
-    }
-    for(i=0 ; i<v.size() ; i++){
-        if(i<uno){
             v[i] = 1;
         }
-        else if(i<dos+uno){
+        else if(v[i] == 2){
             v[i] = 2;
         }
-        else if(i<tres+dos+uno){
+        else{
             v[i] = 3;
         }
+        i++;
     }
 }

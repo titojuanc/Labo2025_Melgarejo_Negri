@@ -17,15 +17,14 @@ elementos del vector i.
 
 vector<int> elementoComun(vector v1, vector v2, vector v3){
     int i=0, j=0, h=0;
-    vector<int> aux;
     while (i < v1.size() && j < v2.size() && h < v3.size()) {
         if (v1[i] == v2[j] && v2[j] == v3[h]) {
             return {i, j, h};  // Encontrado
         }
 
-        if (v1[i] < v2[j] && v1[i] < v3[h]) {
+        if (v1[i] <= v2[j] && v1[i] <= v3[h]) {
             i++;
-        } else if (v2[j] < v1[i] && v2[j] < v3[h]) {
+        } else if (v2[j] <= v1[i] && v2[j] <= v3[h]) {
             j++;
         } else {
             h++;
